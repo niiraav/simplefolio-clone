@@ -121,14 +121,6 @@ const ProjectDetail = () => {
                           </p>}
                       </div>)}
                   </div>
-                  
-                  {/* Impact Image */}
-                  {project.impactImage && (
-                    <SectionImageCarousel 
-                      images={[project.impactImage]} 
-                      title="Impact" 
-                    />
-                  )}
                 </div>}
 
               {/* Reflection */}
