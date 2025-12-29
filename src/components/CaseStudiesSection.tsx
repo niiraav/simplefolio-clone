@@ -54,9 +54,9 @@ const CaseStudyCard = ({
     </div>;
 };
 const CaseStudiesSection = () => {
-  return <section id="case-studies" className="py-20 px-6 max-w-[510px] mx-auto">
+  return <section id="case-studies" className="py-20 max-w-[510px] mx-auto px-0">
         {/* Section Heading */}
-        <h2 className="text-2xl font-bold text-foreground text-left mb-16">
+        <h2 className="text-2xl font-bold text-foreground text-left mb-16 font-serif">
           Here's What I've Been Up To.
         </h2>
         

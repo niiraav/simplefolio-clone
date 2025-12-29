@@ -59,16 +59,16 @@ const experiences: Experience[] = [{
   iconColor: "text-cyan-600"
 }];
 const ExperienceSection = () => {
-  return <section id="experience" className="py-20 px-6 bg-secondary/30 max-w-[510px] mx-auto">
-        <h2 className="text-2xl font-bold text-foreground text-left mb-12">
+  return <section id="experience" className="py-20 max-w-[510px] mx-auto px-0 bg-primary-foreground">
+        <h2 className="text-2xl font-bold text-foreground text-left mb-12 font-serif">
           Work Experience
         </h2>
         
         <div className="space-y-3 rounded-none shadow-none">
           {experiences.map((exp, index) => <div key={exp.id} style={{
-          animationDelay: `${index * 100}ms`,
-          animationFillMode: 'forwards'
-        }} className="flex flex-col sm:items-center gap-2 sm:gap-8 opacity-0 animate-fade-in py-[8px] sm:flex sm:flex-row">
+        animationDelay: `${index * 100}ms`,
+        animationFillMode: 'forwards'
+      }} className="flex flex-col gap-2 opacity-0 animate-fade-in sm:gap-[12px] sm:flex-col py-[12px] sm:flex sm:items-start sm:justify-start">
               <span className="text-sm text-muted-foreground whitespace-nowrap min-w-[180px]">
                 {exp.period}
               </span>
@@ -77,7 +77,7 @@ const ExperienceSection = () => {
                 <span className="text-foreground">{exp.role} at</span>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-border bg-background font-medium text-foreground text-sm">
                   <exp.icon className={`w-4 h-4 ${exp.iconColor}`} />
-                  <span>{exp.company}</span>
+                  <span className="font-medium">{exp.company}</span>
                 </div>
               </div>
             </div>)}

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 interface Testimonial {
   id: number;
   content: string;
@@ -9,47 +8,36 @@ interface Testimonial {
   role: string;
   avatar: string;
 }
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    content: "Mia has an exceptional ability to transform complex problems into elegant design solutions. She was integral in redesigning our app, improving both its functionality and visual appeal.",
-    author: "David",
-    role: "CEO",
-    avatar: "👨‍💼",
-  },
-  {
-    id: 2,
-    content: "Working with Mia was an absolute pleasure! Her keen eye for detail and deep understanding of user experience transformed our project from concept to reality.",
-    author: "Sarah",
-    role: "Head of Design",
-    avatar: "👩‍💻",
-  },
-  {
-    id: 3,
-    content: "Mia is a product designer who truly elevates the design process. Her innovative approach and creative solutions helped us rethink the entire user journey.",
-    author: "Tom",
-    role: "Product Manager",
-    avatar: "👨‍🔬",
-  },
-];
-
+const testimonials: Testimonial[] = [{
+  id: 1,
+  content: "Mia has an exceptional ability to transform complex problems into elegant design solutions. She was integral in redesigning our app, improving both its functionality and visual appeal.",
+  author: "David",
+  role: "CEO",
+  avatar: "👨‍💼"
+}, {
+  id: 2,
+  content: "Working with Mia was an absolute pleasure! Her keen eye for detail and deep understanding of user experience transformed our project from concept to reality.",
+  author: "Sarah",
+  role: "Head of Design",
+  avatar: "👩‍💻"
+}, {
+  id: 3,
+  content: "Mia is a product designer who truly elevates the design process. Her innovative approach and creative solutions helped us rethink the entire user journey.",
+  author: "Tom",
+  role: "Product Manager",
+  avatar: "👨‍🔬"
+}];
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex(prev => (prev + 1) % testimonials.length);
   };
-
   const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(prev => (prev - 1 + testimonials.length) % testimonials.length);
   };
-
   const currentTestimonial = testimonials[currentIndex];
-
-  return (
-    <section id="testimonials" className="py-20 px-6 max-w-[510px] mx-auto">
-        <h2 className="text-2xl font-bold text-foreground text-left mb-12">
+  return <section id="testimonials" className="py-20 max-w-[510px] mx-auto px-0">
+        <h2 className="text-2xl font-bold text-foreground text-left mb-12 font-serif">
           Testimonials
         </h2>
         
@@ -76,20 +64,10 @@ const TestimonialsSection = () => {
               
               {/* Navigation */}
               <div className="flex items-center gap-2">
-                <Button 
-                  variant="outline" 
-                  size="icon"
-                  className="rounded-full"
-                  onClick={prev}
-                >
+                <Button variant="outline" size="icon" className="rounded-full" onClick={prev}>
                   <ChevronLeft className="h-4 w-4" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="icon"
-                  className="rounded-full"
-                  onClick={next}
-                >
+                <Button variant="outline" size="icon" className="rounded-full" onClick={next}>
                   <ChevronRight className="h-4 w-4" />
                 </Button>
               </div>
@@ -98,19 +76,9 @@ const TestimonialsSection = () => {
           
           {/* Dots */}
           <div className="flex items-center justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "bg-foreground w-6" : "bg-muted-foreground/30"
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              />
-            ))}
+            {testimonials.map((_, index) => <button key={index} className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-foreground w-6" : "bg-muted-foreground/30"}`} onClick={() => setCurrentIndex(index)} />)}
           </div>
         </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialsSection;
