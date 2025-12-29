@@ -11,9 +11,9 @@ const HeroSection = () => {
   };
   return <section id="home" className="min-h-[70vh] flex-col pt-28 pb-20 max-w-[510px] mx-auto px-[2px] flex items-start justify-start">
         {/* Avatar */}
-        <div className="mb-8">
-          <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-border">
-            <img alt="Mia Carter" className="w-full h-full object-cover" src="/lovable-uploads/ec518bb2-b216-49b6-b35c-fa7aefcef1b3.jpg" />
+        <div className="mb-8 border-primary">
+          <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-foreground">
+            <img alt="Mia Carter" src="/lovable-uploads/ec518bb2-b216-49b6-b35c-fa7aefcef1b3.jpg" className="w-full h-full object-cover border-primary-foreground" />
           </div>
         </div>
 
@@ -25,7 +25,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Tagline */}
-        <p className="text-base text-muted-foreground max-w-md mb-10 leading-relaxed text-left font-medium px-0">I am passionate about improving experiences, interrogating the "why", and using design to solve complex business problems.</p>
+        <p className="max-w-md mb-10 leading-relaxed text-left font-medium px-0 text-muted-foreground text-lg">I am passionate about improving experiences, interrogating the "why", and using design to solve complex business problems.</p>
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center gap-3">
