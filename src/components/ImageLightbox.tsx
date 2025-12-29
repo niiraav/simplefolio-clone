@@ -101,12 +101,19 @@ const ImageLightbox = ({
         </button>
       )}
 
-      {/* Image counter */}
-      {images.length > 1 && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-muted-foreground">
-          {currentIndex + 1} / {images.length}
-        </div>
-      )}
+      {/* Alt text and counter */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center max-w-[80vw]">
+        {images[currentIndex].alt && (
+          <p className="text-sm text-foreground mb-2 bg-secondary/80 backdrop-blur-sm px-4 py-2 rounded-lg">
+            {images[currentIndex].alt}
+          </p>
+        )}
+        {images.length > 1 && (
+          <span className="text-sm text-muted-foreground">
+            {currentIndex + 1} / {images.length}
+          </span>
+        )}
+      </div>
     </div>
   );
 };

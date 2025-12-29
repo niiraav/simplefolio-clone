@@ -48,6 +48,7 @@ export interface Project {
   images: string[];
   sections?: ProjectSection[];
   impacts?: ProjectImpact[];
+  impactImage?: GalleryImage;
   reflection?: string;
   reflectionImages?: GalleryImage[];
 }
@@ -141,6 +142,7 @@ export const projects: Project[] = [
       { metric: "Mobile Visits", value: "+62%", description: "Increase in mobile traffic" },
       { metric: "Success Rate", value: "+85%", description: "Successful first-attempt deliveries" }
     ],
+    impactImage: { src: gophrReviews, alt: "Trustpilot customer reviews showing positive feedback and high ratings for Gophr service" },
     reflection: "This project taught me that in logistics, 'UX' isn't just about pixels — it's about peace of mind. By focusing on visibility, we didn't just fix a tool; we rebuilt trust between Gophr and its customers.",
     reflectionImages: [
       { src: gophrReviews, alt: "Customer reviews analysis showing improved Trustpilot ratings and sentiment" },
