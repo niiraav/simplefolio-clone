@@ -4,7 +4,7 @@ const AboutSection = () => {
           About
         </h2>
         <div className="space-y-6 text-muted-foreground">
-          <p className="text-lg md:text-xl font-semibold text-foreground leading-relaxed">
+          <p className="text-lg md:text-xl text-foreground leading-relaxed font-medium">
             I'm a curious and enthusiastic product designer with a side passion for code and solving user problems.
           </p>
           <p>
