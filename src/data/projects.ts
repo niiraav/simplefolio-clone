@@ -13,6 +13,7 @@ export interface ProjectSection {
   content: string;
   bullets?: string[];
   image?: string;
+  galleryImages?: string[];
   pullQuote?: {
     text: string;
     label?: string;
@@ -40,6 +41,7 @@ export interface Project {
   sections?: ProjectSection[];
   impacts?: ProjectImpact[];
   reflection?: string;
+  reflectionImages?: string[];
 }
 
 export const projects: Project[] = [
@@ -100,7 +102,8 @@ export const projects: Project[] = [
           "The Booking Engine: We replaced a long, static form with a modular step-by-step flow. Early testing showed users preferred this 'chunked' approach, which reduced cognitive load and errors.",
           "Mobile-First Tracking: Addressing the 'mobile UX' complaint, I designed a native-feeling mobile web view that put the map and courier contact details front-and-centre — no login required for recipients."
         ],
-        image: gophrCards
+        image: gophrCards,
+        galleryImages: [gophrCards, gophrDashboard, gophrTracker]
       },
       {
         title: "Final Designs",
@@ -110,7 +113,8 @@ export const projects: Project[] = [
           "Transparent Tracker: A public tracking link that shows the courier's live location and ETA, dramatically reducing 'Where is my parcel?' support tickets.",
           "Automated Invoicing: A dedicated portal for enterprise clients to manage spend and reporting without contacting account managers."
         ],
-        image: gophrDashboard
+        image: gophrDashboard,
+        galleryImages: [gophrDashboard, gophrTracker, gophrInvoices, gophrCards, gophrHero]
       }
     ],
     impacts: [
@@ -119,7 +123,8 @@ export const projects: Project[] = [
       { metric: "Mobile Visits", value: "+62%", description: "Increase in mobile traffic" },
       { metric: "Success Rate", value: "+85%", description: "Successful first-attempt deliveries" }
     ],
-    reflection: "This project taught me that in logistics, 'UX' isn't just about pixels — it's about peace of mind. By focusing on visibility, we didn't just fix a tool; we rebuilt trust between Gophr and its customers."
+    reflection: "This project taught me that in logistics, 'UX' isn't just about pixels — it's about peace of mind. By focusing on visibility, we didn't just fix a tool; we rebuilt trust between Gophr and its customers.",
+    reflectionImages: [gophrReviews, gophrInvoices]
   },
   {
     id: "design-with-icons",

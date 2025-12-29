@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
+import SectionImageCarousel from "@/components/SectionImageCarousel";
 import { getProjectById } from "@/data/projects";
 const ProjectDetail = () => {
   const {
@@ -92,10 +93,14 @@ const ProjectDetail = () => {
                       </p>
                     </blockquote>}
 
-                  {/* Section Image */}
-                  {section.image && <div className="rounded-[24px] overflow-hidden bg-muted mt-8">
+                  {/* Section Image Carousel */}
+                  {section.galleryImages && section.galleryImages.length > 0 ? (
+                    <SectionImageCarousel images={section.galleryImages} title={section.title} />
+                  ) : section.image && (
+                    <div className="rounded-[24px] overflow-hidden bg-muted mt-8">
                       <img src={section.image} alt={section.title} className="w-full object-cover" />
-                    </div>}
+                    </div>
+                  )}
                 </div>)}
 
               {/* Impact Section */}
@@ -126,6 +131,11 @@ const ProjectDetail = () => {
                   <p className="text-muted-foreground leading-relaxed italic">
                     {project.reflection}
                   </p>
+                  
+                  {/* Reflection Images Carousel */}
+                  {project.reflectionImages && project.reflectionImages.length > 0 && (
+                    <SectionImageCarousel images={project.reflectionImages} title="Reflection" />
+                  )}
                 </div>}
             </> : <>
               {/* Simple Project Layout */}
