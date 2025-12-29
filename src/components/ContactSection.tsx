@@ -16,8 +16,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+    <section id="contact" className="py-20 px-6 max-w-[510px] mx-auto">
         {/* Form Header */}
         <h2 className="text-2xl font-bold text-foreground text-left mb-4">
           Get in touch
@@ -59,7 +58,6 @@ const ContactSection = () => {
             Send Message
           </Button>
         </form>
-      </div>
     </section>
   );
 };

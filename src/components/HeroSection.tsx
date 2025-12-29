@@ -10,8 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-[70vh] flex flex-col items-center justify-center pt-28 pb-20 px-6">
-      <div className="max-w-xl mx-auto">
+    <section id="home" className="min-h-[70vh] flex flex-col items-center justify-center pt-28 pb-20 px-6 max-w-[510px] mx-auto">
         {/* Avatar */}
         <div className="mb-8">
           <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-border">
@@ -52,7 +51,6 @@ const HeroSection = () => {
             Available for new project
           </Button>
         </div>
-      </div>
     </section>
   );
 };

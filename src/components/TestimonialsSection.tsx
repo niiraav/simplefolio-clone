@@ -48,8 +48,7 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+    <section id="testimonials" className="py-20 px-6 max-w-[510px] mx-auto">
         <h2 className="text-2xl font-bold text-foreground text-left mb-12">
           Testimonials
         </h2>
@@ -110,7 +109,6 @@ const TestimonialsSection = () => {
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 };

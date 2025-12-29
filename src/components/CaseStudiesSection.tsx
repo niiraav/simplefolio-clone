@@ -29,7 +29,7 @@ const CaseStudyCard = ({
 }: {
   study: CaseStudy;
 }) => {
-  return <div className="group w-full max-w-[510px] mx-auto">
+  return <div className="group w-full">
       {/* Outer Card Container with rounded border */}
       <div className="rounded-[32px] border p-4 border-border bg-primary-foreground py-[24px] px-[24px]">
         {/* Gray Image Container */}
@@ -54,8 +54,7 @@ const CaseStudyCard = ({
     </div>;
 };
 const CaseStudiesSection = () => {
-  return <section id="case-studies" className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+  return <section id="case-studies" className="py-20 px-6 max-w-[510px] mx-auto">
         {/* Section Heading */}
         <h2 className="text-2xl font-bold text-foreground text-left mb-16">
           Here's What I've Been Up To.
@@ -65,7 +64,6 @@ const CaseStudiesSection = () => {
         <div className="space-y-12">
           {caseStudies.map(study => <CaseStudyCard key={study.id} study={study} />)}
         </div>
-      </div>
     </section>;
 };
 export default CaseStudiesSection;
