@@ -1,7 +1,6 @@
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-6 bg-secondary/30">
-      <div className="max-w-3xl mx-auto">
+    <section id="about" className="py-20 px-6 bg-secondary/30 max-w-[510px] mx-auto">
         <h2 className="text-2xl font-bold text-foreground mb-8 text-left">
           About
         </h2>
@@ -19,7 +18,6 @@ const AboutSection = () => {
             I'm constantly learning new things and always get inspired by people around me.
           </p>
         </div>
-      </div>
     </section>
   );
 };
