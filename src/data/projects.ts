@@ -88,7 +88,7 @@ export const projects: Project[] = [
           "Heuristic Audit: Annotated every screen of the v1 Booking Engine, identifying friction points that made re-booking tedious.",
           "10 User Interviews: Spoke with SMEs and individual shippers."
         ],
-        image: gophrReviews,
+        image: gophrDashboard,
         pullQuote: {
           text: "Users didn't mind a delay as much as they minded the silence. They needed control and proactive communication.",
           label: "Key Insight"
