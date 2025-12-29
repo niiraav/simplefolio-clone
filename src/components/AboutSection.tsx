@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return <section id="about" className="py-20 max-w-[510px] mx-auto px-0 bg-primary-foreground">
-        <h2 className="text-2xl font-bold text-foreground mb-8 text-left font-serif">
+        <h2 className="text-2xl font-bold text-foreground mb-6 text-left font-serif">
           About
         </h2>
         <div className="space-y-6 text-muted-foreground">

@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
   };
   const currentTestimonial = testimonials[currentIndex];
   return <section id="testimonials" className="py-20 max-w-[510px] mx-auto px-0">
-        <h2 className="text-2xl font-bold text-foreground text-left mb-12 font-serif">
+        <h2 className="text-2xl font-bold text-foreground text-left mb-6 font-serif">
           Testimonials
         </h2>
         
