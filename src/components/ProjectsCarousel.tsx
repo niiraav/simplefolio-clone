@@ -39,17 +39,8 @@ const projects: Project[] = [
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="group relative w-[320px] md:w-[380px] flex-shrink-0">
-      <div className="relative overflow-hidden rounded-2xl bg-card shadow-card transition-all duration-300 group-hover:shadow-card-hover group-hover:-translate-y-1">
-        {/* Browser Chrome */}
-        <div className="bg-secondary/50 px-4 py-3 flex items-center gap-2">
-          <div className="flex gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-400" />
-            <div className="w-3 h-3 rounded-full bg-yellow-400" />
-            <div className="w-3 h-3 rounded-full bg-green-400" />
-          </div>
-        </div>
-        
+    <div className="group relative w-[280px] md:w-[360px] lg:w-[420px] flex-shrink-0">
+      <div className="relative overflow-hidden rounded-3xl bg-card shadow-card transition-all duration-300 group-hover:shadow-card-hover group-hover:-translate-y-1">
         {/* Image */}
         <div className="aspect-[4/3] overflow-hidden">
           <img 
@@ -59,24 +50,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
           />
         </div>
       </div>
-      
-      {/* Info */}
-      <div className="mt-4 px-1">
-        <h3 className="font-semibold text-foreground text-base">{project.title}</h3>
-        <p className="text-muted-foreground text-sm mt-1">{project.description}</p>
-      </div>
     </div>
   );
 };
 
 const ProjectsCarousel = () => {
   return (
-    <section id="projects" className="py-8">
-      {/* Horizontal Scroll Container */}
-      <div className="horizontal-scroll px-6 md:px-12">
-        {/* Left spacer for centered start */}
-        <div className="w-[calc((100vw-380px)/2)] flex-shrink-0 hidden md:block" />
-        
+    <section id="projects" className="py-8 w-full overflow-hidden">
+      {/* Horizontal Scroll Container - Full width */}
+      <div className="horizontal-scroll px-4 md:px-8 gap-6">
         {projects.map((project, index) => (
           <div 
             key={project.id}
@@ -86,9 +68,6 @@ const ProjectsCarousel = () => {
             <ProjectCard project={project} />
           </div>
         ))}
-        
-        {/* Right spacer */}
-        <div className="w-[calc((100vw-380px)/2)] flex-shrink-0 hidden md:block" />
       </div>
     </section>
   );
