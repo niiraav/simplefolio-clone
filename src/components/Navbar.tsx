@@ -55,7 +55,7 @@ const Navbar = ({ activeSection = "home" }: NavbarProps) => {
               onMouseEnter={() => setHoveredItem("twitter")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/niiraav" target="_blank" rel="noopener noreferrer">
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
@@ -79,11 +79,13 @@ const Navbar = ({ activeSection = "home" }: NavbarProps) => {
               variant={activeSection === "about" ? "navActive" : "nav"} 
               size="icon"
               className="rounded-xl h-10 w-10"
-              onClick={() => scrollToSection("about")}
+              asChild
               onMouseEnter={() => setHoveredItem("cv")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <FileText className="h-4 w-4" />
+              <a href="https://drive.google.com/file/d/13xzKQZJXQoHyMPpbhQB5bO4XSwUVXJW0/view" target="_blank" rel="noopener noreferrer">
+                <FileText className="h-4 w-4" />
+              </a>
             </Button>
             <div 
               className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 bg-foreground/90 text-background text-xs font-medium rounded-lg whitespace-nowrap transition-all duration-200 ${
@@ -102,10 +104,12 @@ const Navbar = ({ activeSection = "home" }: NavbarProps) => {
         <Button 
           variant="hero" 
           size="sm"
-          className="rounded-lg"
-          onClick={() => scrollToSection("contact")}
+          className="rounded-xl"
+          asChild
         >
-          Book a Call
+          <a href="https://cal.com/niiraav/15min" target="_blank" rel="noopener noreferrer">
+            Book a Call
+          </a>
         </Button>
       </div>
     </nav>
