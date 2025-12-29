@@ -2,8 +2,10 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import ImageLightbox from "./ImageLightbox";
 
+import { GalleryImage } from "@/data/projects";
+
 interface SectionImageCarouselProps {
-  images: string[];
+  images: GalleryImage[];
   title: string;
 }
 
@@ -41,8 +43,8 @@ const SectionImageCarousel = ({ images, title }: SectionImageCarouselProps) => {
         {/* Main carousel image */}
         <div className="relative rounded-[24px] overflow-hidden bg-muted group">
           <img
-            src={images[currentIndex]}
-            alt={`${title} - Image ${currentIndex + 1}`}
+            src={images[currentIndex].src}
+            alt={images[currentIndex].alt}
             className="w-full aspect-[16/10] object-cover cursor-pointer transition-transform duration-300 group-hover:scale-[1.02]"
             onClick={() => openLightbox(currentIndex)}
           />

@@ -7,13 +7,21 @@ import gophrTracker from "@/assets/gophr-tracker.png";
 import gophrInvoices from "@/assets/gophr-invoices.png";
 import gophrReviews from "@/assets/gophr-reviews.png";
 import gophrCards from "@/assets/gophr-cards.png";
+import gophrMobileEvolution from "@/assets/gophr-mobile-evolution.png";
+import gophrWireframes from "@/assets/gophr-wireframes.png";
+import gophrCardSystem from "@/assets/gophr-card-system.png";
+
+export interface GalleryImage {
+  src: string;
+  alt: string;
+}
 
 export interface ProjectSection {
   title: string;
   content: string;
   bullets?: string[];
   image?: string;
-  galleryImages?: string[];
+  galleryImages?: GalleryImage[];
   pullQuote?: {
     text: string;
     label?: string;
@@ -41,7 +49,7 @@ export interface Project {
   sections?: ProjectSection[];
   impacts?: ProjectImpact[];
   reflection?: string;
-  reflectionImages?: string[];
+  reflectionImages?: GalleryImage[];
 }
 
 export const projects: Project[] = [
@@ -103,7 +111,11 @@ export const projects: Project[] = [
           "Mobile-First Tracking: Addressing the 'mobile UX' complaint, I designed a native-feeling mobile web view that put the map and courier contact details front-and-centre — no login required for recipients."
         ],
         image: gophrCards,
-        galleryImages: [gophrCards, gophrDashboard, gophrTracker]
+        galleryImages: [
+          { src: gophrMobileEvolution, alt: "Mobile app UI evolution from V1 to V3, showing the progression of the Manage Jobs interface design" },
+          { src: gophrWireframes, alt: "Low-fidelity wireframe sketches showing dashboard, menu, parcel details, and support ticket flows" },
+          { src: gophrCardSystem, alt: "Card system design showing single delivery, multi-drop off, and job status states" }
+        ]
       },
       {
         title: "Final Designs",
@@ -114,7 +126,13 @@ export const projects: Project[] = [
           "Automated Invoicing: A dedicated portal for enterprise clients to manage spend and reporting without contacting account managers."
         ],
         image: gophrDashboard,
-        galleryImages: [gophrDashboard, gophrTracker, gophrInvoices, gophrCards, gophrHero]
+        galleryImages: [
+          { src: gophrDashboard, alt: "Smart dashboard showing centralised job management view with status categorisation" },
+          { src: gophrTracker, alt: "Live tracking interface showing courier location and delivery ETA" },
+          { src: gophrInvoices, alt: "Automated invoicing portal for enterprise spend management" },
+          { src: gophrCards, alt: "Modular card UI with colour-coded status badges for quick job scanning" },
+          { src: gophrHero, alt: "Gophr platform hero showing the complete logistics management interface" }
+        ]
       }
     ],
     impacts: [
@@ -124,7 +142,10 @@ export const projects: Project[] = [
       { metric: "Success Rate", value: "+85%", description: "Successful first-attempt deliveries" }
     ],
     reflection: "This project taught me that in logistics, 'UX' isn't just about pixels — it's about peace of mind. By focusing on visibility, we didn't just fix a tool; we rebuilt trust between Gophr and its customers.",
-    reflectionImages: [gophrReviews, gophrInvoices]
+    reflectionImages: [
+      { src: gophrReviews, alt: "Customer reviews analysis showing improved Trustpilot ratings and sentiment" },
+      { src: gophrInvoices, alt: "Enterprise invoicing portal demonstrating automated spend management" }
+    ]
   },
   {
     id: "design-with-icons",

@@ -1,8 +1,9 @@
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useCallback } from "react";
+import { GalleryImage } from "@/data/projects";
 
 interface ImageLightboxProps {
-  images: string[];
+  images: GalleryImage[];
   currentIndex: number;
   isOpen: boolean;
   onClose: () => void;
@@ -80,8 +81,8 @@ const ImageLightbox = ({
         onClick={(e) => e.stopPropagation()}
       >
         <img
-          src={images[currentIndex]}
-          alt={`Gallery image ${currentIndex + 1}`}
+          src={images[currentIndex].src}
+          alt={images[currentIndex].alt}
           className="max-w-full max-h-[85vh] object-contain rounded-lg"
         />
       </div>
