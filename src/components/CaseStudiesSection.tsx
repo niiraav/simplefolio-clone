@@ -33,31 +33,34 @@ const caseStudies: CaseStudy[] = [
 
 const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
   return (
-    <div className="group">
-      {/* Card Container */}
-      <div className="bg-card rounded-3xl p-4 shadow-sm border border-border/50 transition-all duration-300 group-hover:shadow-lg">
-        {/* Image */}
-        <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-muted">
-          <img 
-            src={study.image} 
-            alt={study.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
+    <div className="group w-full max-w-[510px] mx-auto">
+      {/* Outer Card Container with rounded border */}
+      <div className="rounded-[32px] border border-border/40 p-4 bg-card">
+        {/* Gray Image Container */}
+        <div className="bg-[hsl(220,10%,85%)] rounded-[24px] p-6 md:p-8">
+          {/* Inner white card with image */}
+          <div className="bg-background rounded-2xl overflow-hidden shadow-lg">
+            <img 
+              src={study.image} 
+              alt={study.title}
+              className="w-full aspect-[4/3] object-cover"
+            />
+          </div>
         </div>
-      </div>
-      
-      {/* Content below card */}
-      <div className="mt-6 space-y-3">
-        <h3 className="text-xl font-semibold text-foreground">
-          {study.title}
-        </h3>
-        <p className="text-muted-foreground leading-relaxed">
-          {study.description}
-        </p>
-        <button className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-foreground rounded-full font-medium transition-colors hover:bg-secondary/80 mt-2">
-          View Project
-          <ArrowRight className="w-4 h-4" />
-        </button>
+        
+        {/* Content below image container */}
+        <div className="pt-8 pb-4 px-2 space-y-4">
+          <h3 className="text-2xl md:text-[28px] font-bold text-foreground leading-tight">
+            {study.title}
+          </h3>
+          <p className="text-muted-foreground leading-relaxed">
+            {study.description}
+          </p>
+          <button className="group/btn inline-flex items-center gap-2 px-6 py-3 bg-secondary text-foreground rounded-full font-medium transition-all duration-300 hover:bg-secondary/80 hover:gap-3 mt-2">
+            View Project
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -73,7 +76,7 @@ const CaseStudiesSection = () => {
         </h2>
         
         {/* Case Studies Grid */}
-        <div className="space-y-16">
+        <div className="space-y-12">
           {caseStudies.map((study) => (
             <CaseStudyCard key={study.id} study={study} />
           ))}
