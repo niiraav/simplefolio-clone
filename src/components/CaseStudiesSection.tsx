@@ -57,7 +57,7 @@ const CaseStudiesSection = () => {
   return <section id="case-studies" className="py-20 px-6">
       <div className="max-w-3xl mx-auto">
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+        <h2 className="text-2xl font-bold text-foreground text-left mb-16">
           Here's What I've Been Up To.
         </h2>
         
