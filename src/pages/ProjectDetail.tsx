@@ -58,13 +58,9 @@ const ProjectDetail = () => {
               </a>}
           </div>
 
-          {/* Hero Image(s) */}
+          {/* Hero Image */}
           <div className="mb-16">
-            {project.heroImages && project.heroImages.length > 0 ? (
-              <SectionImageCarousel images={project.heroImages} title={project.title} />
-            ) : (
-              <ClickableImage image={{ src: project.images[0], alt: project.title }} />
-            )}
+            <ClickableImage image={{ src: project.images[0], alt: project.title }} />
           </div>
 
           {isDetailedCaseStudy ? <>
