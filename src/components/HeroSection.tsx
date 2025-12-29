@@ -30,7 +30,7 @@ const HeroSection = () => {
         {/* CTAs */}
         <div className="flex flex-wrap items-center gap-3">
           <Button variant="hero" size="lg" onClick={() => scrollToSection("contact")}>
-            Get this Template
+            Get in touch
           </Button>
           <Button variant="availability" size="lg">
             <span className="w-2 h-2 rounded-full bg-accent" />
