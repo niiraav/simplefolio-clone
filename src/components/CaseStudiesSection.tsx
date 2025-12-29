@@ -2,49 +2,41 @@ import { ArrowRight } from "lucide-react";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
-
 interface CaseStudy {
   id: number;
   title: string;
   description: string;
   image: string;
 }
-
-const caseStudies: CaseStudy[] = [
-  {
-    id: 1,
-    title: "Aero Landing page design",
-    description: "This project focuses on the design and development of a comprehensive AI chatbot platform, Aero.",
-    image: project2,
-  },
-  {
-    id: 2,
-    title: "Design with Icons That Stand Out",
-    description: "A comprehensive icon library for modern interfaces with customizable styles.",
-    image: project1,
-  },
-  {
-    id: 3,
-    title: "Discover The Beauty Of Nature",
-    description: "E-commerce platform designed for outdoor enthusiasts with seamless checkout flows.",
-    image: project3,
-  },
-];
-
-const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
-  return (
-    <div className="group w-full max-w-[510px] mx-auto">
+const caseStudies: CaseStudy[] = [{
+  id: 1,
+  title: "Aero Landing page design",
+  description: "This project focuses on the design and development of a comprehensive AI chatbot platform, Aero.",
+  image: project2
+}, {
+  id: 2,
+  title: "Design with Icons That Stand Out",
+  description: "A comprehensive icon library for modern interfaces with customizable styles.",
+  image: project1
+}, {
+  id: 3,
+  title: "Discover The Beauty Of Nature",
+  description: "E-commerce platform designed for outdoor enthusiasts with seamless checkout flows.",
+  image: project3
+}];
+const CaseStudyCard = ({
+  study
+}: {
+  study: CaseStudy;
+}) => {
+  return <div className="group w-full max-w-[510px] mx-auto">
       {/* Outer Card Container with rounded border */}
-      <div className="rounded-[32px] border border-border/40 p-4 bg-card">
+      <div className="rounded-[32px] border p-4 border-border bg-primary-foreground">
         {/* Gray Image Container */}
         <div className="bg-[hsl(220,10%,85%)] rounded-[24px] p-6 md:p-8">
           {/* Inner white card with image */}
           <div className="bg-background rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src={study.image} 
-              alt={study.title}
-              className="w-full aspect-[4/3] object-cover"
-            />
+            <img src={study.image} alt={study.title} className="w-full aspect-[4/3] object-cover" />
           </div>
         </div>
         
@@ -62,13 +54,10 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const CaseStudiesSection = () => {
-  return (
-    <section id="case-studies" className="py-20 px-6">
+  return <section id="case-studies" className="py-20 px-6">
       <div className="max-w-3xl mx-auto">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
@@ -77,13 +66,9 @@ const CaseStudiesSection = () => {
         
         {/* Case Studies Grid */}
         <div className="space-y-12">
-          {caseStudies.map((study) => (
-            <CaseStudyCard key={study.id} study={study} />
-          ))}
+          {caseStudies.map(study => <CaseStudyCard key={study.id} study={study} />)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CaseStudiesSection;
