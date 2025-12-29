@@ -31,14 +31,10 @@ const CaseStudyCard = ({
 }) => {
   return <div className="group w-full max-w-[510px] mx-auto">
       {/* Outer Card Container with rounded border */}
-      <div className="rounded-[32px] border p-4 border-border bg-primary-foreground">
+      <div className="rounded-[32px] border p-4 border-border bg-primary-foreground py-[24px] px-[24px]">
         {/* Gray Image Container */}
         <div className="rounded-[24px] overflow-hidden">
-          <img 
-            src={study.image} 
-            alt={study.title} 
-            className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105" 
-          />
+          <img src={study.image} alt={study.title} className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105" />
         </div>
         
         {/* Content below image container */}
