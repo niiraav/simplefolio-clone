@@ -10,6 +10,9 @@ import gophrCards from "@/assets/gophr-cards.png";
 import gophrMobileEvolution from "@/assets/gophr-mobile-evolution.png";
 import gophrWireframes from "@/assets/gophr-wireframes.png";
 import gophrCardSystem from "@/assets/gophr-card-system.png";
+import gophrUserReviews from "@/assets/gophr-user-reviews.png";
+import gophrCompetitorAnalysis from "@/assets/gophr-competitor-analysis.png";
+import gophrUserInterviews from "@/assets/gophr-user-interviews.png";
 
 export interface GalleryImage {
   src: string;
@@ -88,7 +91,11 @@ export const projects: Project[] = [
           "Heuristic Audit: Annotated every screen of the v1 Booking Engine, identifying friction points that made re-booking tedious.",
           "10 User Interviews: Spoke with SMEs and individual shippers."
         ],
-        image: gophrDashboard,
+        galleryImages: [
+          { src: gophrUserReviews, alt: "User review analysis from Trustpilot and Google showing customer feedback about delivery issues, courier reliability, and app experience" },
+          { src: gophrCompetitorAnalysis, alt: "Competitive analysis matrix comparing Postmates, DoorDash, Amazon Logistics, FedEx, and UPS across booking journey, navigation, job dashboard, and parcel tracking features" },
+          { src: gophrUserInterviews, alt: "User interview sessions conducted via video calls with SME customers and individual shippers to understand pain points" }
+        ],
         pullQuote: {
           text: "Users didn't mind a delay as much as they minded the silence. They needed control and proactive communication.",
           label: "Key Insight"
