@@ -17,7 +17,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-xl mx-auto">
         {/* Form Header */}
         <h2 className="text-2xl font-bold text-foreground text-left mb-4">
           Get in touch
