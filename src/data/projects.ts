@@ -10,6 +10,9 @@ import gophrCards from "@/assets/gophr-cards.png";
 import gophrMobileEvolution from "@/assets/gophr-mobile-evolution.png";
 import gophrWireframes from "@/assets/gophr-wireframes.png";
 import gophrCardSystem from "@/assets/gophr-card-system.png";
+import gophrReviewsBefore from "@/assets/gophr-reviews-before.png";
+import gophrCompetitorAnalysis from "@/assets/gophr-competitor-analysis.png";
+import gophrUserInterviews from "@/assets/gophr-user-interviews.png";
 
 export interface GalleryImage {
   src: string;
@@ -46,6 +49,7 @@ export interface Project {
   solution: string;
   liveUrl?: string;
   images: string[];
+  heroImages?: GalleryImage[];
   sections?: ProjectSection[];
   impacts?: ProjectImpact[];
   impactImage?: GalleryImage;
@@ -66,6 +70,11 @@ export const projects: Project[] = [
     solution: "Transform a utilitarian booking tool into a transparent, trust-building logistics platform that optimises operational efficiency while giving customers total visibility.",
     liveUrl: "https://gophr.com",
     images: [gophrHero, gophrDashboard, gophrTracker],
+    heroImages: [
+      { src: gophrReviewsBefore, alt: "Pre-redesign customer reviews from Trustpilot and Google showing mixed feedback about delivery issues, poor communication, outdated UI, and tracking problems" },
+      { src: gophrCompetitorAnalysis, alt: "Competitor analysis table comparing Postmates, DoorDash, Amazon Logistics, FedEx, and UPS across booking journey, navigation, job dashboard, and parcel tracking features" },
+      { src: gophrUserInterviews, alt: "User interview sessions with customers discussing their experiences with Gophr's delivery service" }
+    ],
     sections: [
       {
         title: "The Challenge",
