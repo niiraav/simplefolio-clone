@@ -48,11 +48,7 @@ const ProjectDetail = () => {
               </div>}
 
             {/* Tools */}
-            {project.tools && project.tools.length > 0 && <div className="flex flex-wrap gap-2 mb-6">
-                {project.tools.map((tool, index) => <span key={index} className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded">
-                    {tool}
-                  </span>)}
-              </div>}
+            {project.tools && project.tools.length > 0}
 
             {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-background border border-border rounded-full font-medium text-foreground hover:bg-secondary transition-colors">
                 Live Website
