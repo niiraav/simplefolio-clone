@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import SectionImageCarousel from "@/components/SectionImageCarousel";
+import ClickableImage from "@/components/ClickableImage";
 import { getProjectById } from "@/data/projects";
 const ProjectDetail = () => {
   const {
@@ -121,6 +122,11 @@ const ProjectDetail = () => {
                           </p>}
                       </div>)}
                   </div>
+                  
+                  {/* Impact Image */}
+                  {project.impactImage && (
+                    <ClickableImage image={project.impactImage} />
+                  )}
                 </div>}
 
               {/* Reflection */}

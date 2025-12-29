@@ -44,7 +44,7 @@ const SectionImageCarousel = ({ images, title }: SectionImageCarouselProps) => {
         <div className="relative rounded-[24px] overflow-hidden bg-muted group">
           <img
             src={images[currentIndex].src}
-            alt={images[currentIndex].alt}
+            alt=""
             className="w-full aspect-[16/10] object-cover cursor-pointer transition-transform duration-300 group-hover:scale-[1.02]"
             onClick={() => openLightbox(currentIndex)}
           />

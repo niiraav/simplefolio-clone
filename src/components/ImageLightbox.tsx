@@ -75,16 +75,23 @@ const ImageLightbox = ({
         </button>
       )}
 
-      {/* Image */}
+      {/* Image and caption */}
       <div
-        className="max-w-[90vw] max-h-[85vh] flex items-center justify-center"
+        className="max-w-[90vw] max-h-[85vh] flex flex-col items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
-          className="max-w-full max-h-[85vh] object-contain rounded-lg"
+          className="max-w-full max-h-[75vh] object-contain rounded-lg"
         />
+        
+        {/* Alt text caption - only shown in lightbox */}
+        {images[currentIndex].alt && (
+          <p className="mt-4 text-sm text-muted-foreground text-center max-w-2xl px-4">
+            {images[currentIndex].alt}
+          </p>
+        )}
       </div>
 
       {/* Next button */}
