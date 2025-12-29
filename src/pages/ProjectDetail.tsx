@@ -59,8 +59,8 @@ const ProjectDetail = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="rounded-[24px] overflow-hidden bg-muted mb-16">
-            <img src={project.images[0]} alt={project.title} className="w-full aspect-[4/3] object-cover" />
+          <div className="mb-16">
+            <ClickableImage image={{ src: project.images[0], alt: project.title }} />
           </div>
 
           {isDetailedCaseStudy ? <>
@@ -94,13 +94,11 @@ const ProjectDetail = () => {
                       </p>
                     </blockquote>}
 
-                  {/* Section Image Carousel */}
+                  {/* Section Image Carousel or Single Image */}
                   {section.galleryImages && section.galleryImages.length > 0 ? (
                     <SectionImageCarousel images={section.galleryImages} title={section.title} />
                   ) : section.image && (
-                    <div className="rounded-[24px] overflow-hidden bg-muted mt-8">
-                      <img src={section.image} alt={section.title} className="w-full object-cover" />
-                    </div>
+                    <ClickableImage image={{ src: section.image, alt: section.title }} />
                   )}
                 </div>)}
 
@@ -154,8 +152,8 @@ const ProjectDetail = () => {
                 </p>
               </div>
 
-              {project.images[1] && <div className="rounded-[24px] overflow-hidden bg-muted mb-16">
-                  <img src={project.images[1]} alt={`${project.title} - Detail 1`} className="w-full aspect-[4/3] object-cover" />
+              {project.images[1] && <div className="mb-16">
+                  <ClickableImage image={{ src: project.images[1], alt: `${project.title} - Detail 1` }} />
                 </div>}
 
               <div className="mb-16">
@@ -167,8 +165,8 @@ const ProjectDetail = () => {
                 </p>
               </div>
 
-              {project.images[2] && <div className="rounded-[24px] overflow-hidden bg-muted mb-16">
-                  <img src={project.images[2]} alt={`${project.title} - Detail 2`} className="w-full object-cover" />
+              {project.images[2] && <div className="mb-16">
+                  <ClickableImage image={{ src: project.images[2], alt: `${project.title} - Detail 2` }} />
                 </div>}
             </>}
         </section>

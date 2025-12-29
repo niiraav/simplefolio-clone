@@ -5,7 +5,7 @@ import gophrHero from "@/assets/gophr-hero.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
 import gophrTracker from "@/assets/gophr-tracker.png";
 import gophrInvoices from "@/assets/gophr-invoices.png";
-import gophrReviews from "@/assets/gophr-reviews.png";
+import gophrTrustpilot from "@/assets/gophr-trustpilot.png";
 import gophrCards from "@/assets/gophr-cards.png";
 import gophrMobileEvolution from "@/assets/gophr-mobile-evolution.png";
 import gophrWireframes from "@/assets/gophr-wireframes.png";
@@ -142,10 +142,10 @@ export const projects: Project[] = [
       { metric: "Mobile Visits", value: "+62%", description: "Increase in mobile traffic" },
       { metric: "Success Rate", value: "+85%", description: "Successful first-attempt deliveries" }
     ],
-    impactImage: { src: gophrReviews, alt: "Trustpilot customer reviews showing positive feedback about Gophr's easy-to-use website, real-time courier tracking, and excellent service from reviewers including 24Haymarket Ltd, apthirtyoone, Lynne, Rebekah Taylor, and India" },
+    impactImage: { src: gophrTrustpilot, alt: "Trustpilot rating improved from 3.2 to 4.3 stars, with customer reviews praising Gophr's easy-to-use website, real-time courier tracking, and excellent service" },
     reflection: "This project taught me that in logistics, 'UX' isn't just about pixels — it's about peace of mind. By focusing on visibility, we didn't just fix a tool; we rebuilt trust between Gophr and its customers.",
     reflectionImages: [
-      { src: gophrReviews, alt: "Customer reviews analysis showing improved Trustpilot ratings and sentiment" },
+      { src: gophrTrustpilot, alt: "Customer reviews analysis showing improved Trustpilot ratings and sentiment" },
       { src: gophrInvoices, alt: "Enterprise invoicing portal demonstrating automated spend management" }
     ]
   },
