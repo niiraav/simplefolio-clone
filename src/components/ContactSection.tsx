@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Check } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -50,10 +51,21 @@ const ContactSection = () => {
       })} className="bg-muted/50 border-0 min-h-[120px] resize-none transition-all duration-300 focus:bg-muted/70" />
           <Button 
             type="submit" 
-            className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 transition-all duration-300"
+            className={`w-full h-12 transition-all duration-300 ${
+              isSubmitted 
+                ? "bg-green-600 hover:bg-green-700 text-white" 
+                : "bg-foreground text-background hover:bg-foreground/90"
+            }`}
             disabled={isSubmitted}
           >
-            {isSubmitted ? "Thank you" : "Send Message"}
+            {isSubmitted ? (
+              <span className="flex items-center gap-2 animate-fade-in">
+                <Check className="h-5 w-5 animate-scale-in" />
+                Thank you
+              </span>
+            ) : (
+              "Send Message"
+            )}
           </Button>
         </form>
     </section>;

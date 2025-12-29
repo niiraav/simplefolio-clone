@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Mia Carter. All rights reserved.
+            © {currentYear} Nirav Arvinda. All rights reserved.
           </p>
           
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/niiraav" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -25,7 +25,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="https://dribbble.com" 
+              href="https://dribbble.com/niiraav" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -41,7 +41,7 @@ const Footer = () => {
               <Mail className="h-5 w-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/niravarvinda" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
