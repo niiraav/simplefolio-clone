@@ -33,11 +33,12 @@ const CaseStudyCard = ({
       {/* Outer Card Container with rounded border */}
       <div className="rounded-[32px] border p-4 border-border bg-primary-foreground">
         {/* Gray Image Container */}
-        <div className="bg-[hsl(220,10%,85%)] rounded-[24px] p-6 md:p-8">
-          {/* Inner white card with image */}
-          <div className="bg-background rounded-2xl overflow-hidden shadow-lg">
-            <img src={study.image} alt={study.title} className="w-full aspect-[4/3] object-cover" />
-          </div>
+        <div className="rounded-[24px] overflow-hidden">
+          <img 
+            src={study.image} 
+            alt={study.title} 
+            className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
         </div>
         
         {/* Content below image container */}
