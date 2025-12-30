@@ -30,7 +30,7 @@ const ProjectDetail = () => {
       <Navbar />
       <main className="pt-8">
         {/* Hero Section */}
-        <section className="max-w-[510px] mx-auto px-4 md:px-0 py-[80px] pt-[120px]">
+        <section className="max-w-[510px] mx-auto px-4 py-[80px] pt-[120px] md:px-[16px]">
           {/* Go Back Link */}
           <Link to="/#case-studies" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 group">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -60,7 +60,10 @@ const ProjectDetail = () => {
 
           {/* Hero Image */}
           <div className="mb-16">
-            <ClickableImage image={{ src: project.images[0], alt: project.title }} />
+            <ClickableImage image={{
+            src: project.images[0],
+            alt: project.title
+          }} />
           </div>
 
           {isDetailedCaseStudy ? <>
@@ -95,11 +98,10 @@ const ProjectDetail = () => {
                     </blockquote>}
 
                   {/* Section Image Carousel or Single Image */}
-                  {section.galleryImages && section.galleryImages.length > 0 ? (
-                    <SectionImageCarousel images={section.galleryImages} title={section.title} />
-                  ) : section.image && (
-                    <ClickableImage image={{ src: section.image, alt: section.title }} />
-                  )}
+                  {section.galleryImages && section.galleryImages.length > 0 ? <SectionImageCarousel images={section.galleryImages} title={section.title} /> : section.image && <ClickableImage image={{
+              src: section.image,
+              alt: section.title
+            }} />}
                 </div>)}
 
               {/* Impact Section */}
@@ -122,9 +124,7 @@ const ProjectDetail = () => {
                   </div>
                   
                   {/* Impact Image */}
-                  {project.impactImage && (
-                    <ClickableImage image={project.impactImage} />
-                  )}
+                  {project.impactImage && <ClickableImage image={project.impactImage} />}
                 </div>}
 
               {/* Reflection */}
@@ -137,9 +137,7 @@ const ProjectDetail = () => {
                   </p>
                   
                   {/* Reflection Images Carousel */}
-                  {project.reflectionImages && project.reflectionImages.length > 0 && (
-                    <SectionImageCarousel images={project.reflectionImages} title="Reflection" />
-                  )}
+                  {project.reflectionImages && project.reflectionImages.length > 0 && <SectionImageCarousel images={project.reflectionImages} title="Reflection" />}
                 </div>}
             </> : <>
               {/* Simple Project Layout */}
@@ -153,7 +151,10 @@ const ProjectDetail = () => {
               </div>
 
               {project.images[1] && <div className="mb-16">
-                  <ClickableImage image={{ src: project.images[1], alt: `${project.title} - Detail 1` }} />
+                  <ClickableImage image={{
+              src: project.images[1],
+              alt: `${project.title} - Detail 1`
+            }} />
                 </div>}
 
               <div className="mb-16">
@@ -166,7 +167,10 @@ const ProjectDetail = () => {
               </div>
 
               {project.images[2] && <div className="mb-16">
-                  <ClickableImage image={{ src: project.images[2], alt: `${project.title} - Detail 2` }} />
+                  <ClickableImage image={{
+              src: project.images[2],
+              alt: `${project.title} - Detail 2`
+            }} />
                 </div>}
             </>}
         </section>
