@@ -30,7 +30,7 @@ const ProjectDetail = () => {
       <Navbar />
       <main className="pt-8">
         {/* Hero Section */}
-        <section className="max-w-[510px] mx-auto px-4 md:px-[16px] py-[120px] pt-[120px] pb-[80px]">
+        <section className="max-w-[510px] mx-auto px-6 md:px-4 py-[120px] pt-[120px] pb-[80px]">
           {/* Go Back Link */}
           <Link to="/#case-studies" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8 group">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
