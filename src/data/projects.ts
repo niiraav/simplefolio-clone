@@ -13,6 +13,8 @@ import gophrCardSystem from "@/assets/gophr-card-system.png";
 import gophrUserReviews from "@/assets/gophr-user-reviews.png";
 import gophrCompetitorAnalysis from "@/assets/gophr-competitor-analysis.png";
 import gophrUserInterviews from "@/assets/gophr-user-interviews.png";
+import teamsHero from "@/assets/teams-hero.gif";
+import teamsWorkNutshell from "@/assets/teams-work-nutshell.png";
 
 export interface GalleryImage {
   src: string;
@@ -155,6 +157,74 @@ export const projects: Project[] = [
       { src: gophrTrustpilot, alt: "Customer reviews analysis showing improved Trustpilot ratings and sentiment" },
       { src: gophrInvoices, alt: "Enterprise invoicing portal demonstrating automated spend management" }
     ]
+  },
+  {
+    id: "microsoft-teams-ecosystem",
+    title: "Scaling the Microsoft Teams Partner Ecosystem",
+    description: "Empowering major partners (ISVs) to build high-quality, native-feeling apps directly within Teams.",
+    image: teamsHero,
+    role: "Senior UX & Interaction Designer",
+    timeline: "Nov 2022 – Dec 2023",
+    tools: ["Figma", "MS Teams", "ProtoPie"],
+    overview: "Following the pandemic, Microsoft Teams exploded in usage, but users were constantly switching contexts—jumping between Teams and external tools like Asana or Mural. The challenge was to transform Teams from a communication tool into a centralized operating system for work.",
+    solution: "Empower major partners (ISVs) to build high-quality, native-feeling apps directly within Teams, ensuring they met Microsoft's rigorous standards while solving complex user needs in Healthcare, EDU, and Enterprise sectors.",
+    images: [teamsHero, teamsWorkNutshell],
+    sections: [
+      {
+        title: "The Challenge",
+        content: "Unlocking the Platform's Potential",
+        bullets: [
+          "Users constantly switching contexts—jumping between Teams and external tools like Asana or Mural",
+          "Need to transform Teams from a communication tool into a centralized operating system for work",
+          "Partners required guidance to meet Microsoft's rigorous standards while solving complex user needs"
+        ],
+        pullQuote: {
+          text: "Empower major partners (ISVs) to build high-quality, native-feeling apps directly within Teams.",
+          label: "The Goal"
+        }
+      },
+      {
+        title: "My Role & Approach",
+        content: "The Bridge Between Partners and Platform — I acted as the lead design consultant and execution arm for strategic partners including U.S. Bank, Shopify, Mural, UberEATS, Starbucks, and Asana. My role was twofold:",
+        bullets: [
+          "Strategic Translation: I worked directly with partner stakeholders to translate their standalone product requirements into Teams-native constructs (Bots, Tabs, Messaging Extensions).",
+          "System Governance: I ensured every integration adhered to the Fluent 2.0 Design System, guaranteeing accessibility (WCAG 2.1) and a seamless 'one-Microsoft' feel."
+        ]
+      },
+      {
+        title: "Discovery & Process",
+        content: "Discovery & Requirements — For complex integrations like U.S. Bank, I led workshops to map their proprietary banking flows to Teams' improved security architecture. We identified high-friction points where users dropped off and replaced them with Adaptive Cards—allowing users to approve transactions or view balances without leaving the chat.",
+        bullets: [
+          "Messaging Extensions: Designed flows for UberEATS and Starbucks that allowed employees to coordinate lunch orders directly inside a channel thread.",
+          "Meeting Extensions: Created collaborative whiteboard experiences for Mural, enabling real-time co-creation during video calls.",
+          "Personal Apps: Built dashboard views for Asana and Shopify, giving users a personalized 'cockpit' of their tasks and store metrics pinned to their Teams sidebar."
+        ],
+        image: teamsWorkNutshell,
+        pullQuote: {
+          text: "I utilized the full breadth of the Teams Platform capabilities to create 'micro-apps' designed with Fluent 2.0.",
+          label: "Designing with Fluent 2.0"
+        }
+      },
+      {
+        title: "Overcoming Constraints",
+        content: "A core challenge was balancing the partner's brand identity with Microsoft's strict UI guidelines.",
+        bullets: [
+          "The Problem: Partners often wanted custom UI that broke accessibility or consistency rules.",
+          "The Solution: I created a 'Design Guidance' framework. This toolkit educated partners on why we use specific Fluent components (e.g., standardising distinct focus states for keyboard navigation), reducing development time and ensuring a 95% first-pass validation rate for the Teams Store."
+        ],
+        pullQuote: {
+          text: "The Design Guidance framework reduced development time and ensured a 95% first-pass validation rate for the Teams Store.",
+          label: "The Crux"
+        }
+      }
+    ],
+    impacts: [
+      { metric: "Scale", value: "20+", description: "Enterprise-grade integrations delivered" },
+      { metric: "Platform Growth", value: "160%", description: "Increase in apps created on platform" },
+      { metric: "Engagement", value: "3x", description: "Increase in Daily Active Users (DAU)" },
+      { metric: "TrustPilot", value: "4.1★", description: "Improved platform rating" }
+    ],
+    reflection: "Due to strict NDA constraints, I cannot publicly display specific financial or internal dashboard designs. However, I can walk through generalized 'white-label' workflows and my specific contribution to the Fluent design adoption process in a private interview."
   },
   {
     id: "design-with-icons",
