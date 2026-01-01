@@ -68,7 +68,7 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => <div key={exp.id} style={{
         animationDelay: `${index * 100}ms`,
         animationFillMode: 'forwards'
-      }} className="flex flex-col gap-2 opacity-0 animate-fade-in sm:gap-[12px] sm:flex-col py-[12px] sm:flex sm:items-start sm:justify-start">
+      }} className="flex flex-col gap-2 opacity-0 animate-fade-in sm:flex-col sm:flex sm:items-start sm:justify-start py-[8px] sm:gap-[4px]">
               <span className="text-sm text-muted-foreground whitespace-nowrap min-w-[180px]">
                 {exp.period}
               </span>
