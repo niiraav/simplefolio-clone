@@ -15,6 +15,7 @@ import gophrCompetitorAnalysis from "@/assets/gophr-competitor-analysis.png";
 import gophrUserInterviews from "@/assets/gophr-user-interviews.png";
 import teamsHero from "@/assets/teams-hero.gif";
 import teamsWorkNutshell from "@/assets/teams-work-nutshell.png";
+import worldpayHero from "@/assets/worldpay-hero.png";
 
 export interface GalleryImage {
   src: string;
@@ -224,7 +225,87 @@ export const projects: Project[] = [
       { metric: "Engagement", value: "3x", description: "Increase in Daily Active Users (DAU)" },
       { metric: "TrustPilot", value: "4.1★", description: "Improved platform rating" }
     ],
-    reflection: "Due to strict NDA constraints, I cannot publicly display specific financial or internal dashboard designs. However, I can walk through generalized 'white-label' workflows and my specific contribution to the Fluent design adoption process in a private interview."
+    reflection: "Due to strict NDA constraints, I cannot publicly display specific financial or internal dashboard designs. However, I can walk through generalised 'white-label' workflows and my specific contribution to the Fluent design adoption process in a private interview."
+  },
+  {
+    id: "worldpay-contract-renewals",
+    title: "Digitising the 'Black Box' of Contract Renewals",
+    description: "Transforming a high-friction, offline negotiation into a seamless digital experience where merchants could review terms and legally sign in clicks, not hours.",
+    image: worldpayHero,
+    role: "Lead Product Designer (Worldpay dMPX)",
+    timeline: "14 weeks (March–June 2025)",
+    tools: ["Figma", "DocuSign", "Jira", "Miro"],
+    overview: "For years, Worldpay's SMB merchants faced a fragmented, manual renewal process. When a contract ended, there was no digital path to renew—only a forced, 7-10 minute phone call with an agent.",
+    solution: "Transform a high-friction, offline negotiation into a seamless digital experience where merchants could review terms and legally sign in clicks, not hours.",
+    images: [worldpayHero],
+    sections: [
+      {
+        title: "The Challenge",
+        content: "Friction at the Point of Renewal",
+        bullets: [
+          "The Trust Gap: The lack of fixed, visible pricing created 'Comparison Anxiety.' Merchants often suspected they weren't getting the best deal, leading to hesitation and suspicion.",
+          "The Operational Cost: Worldpay agents were forced to manually dial outbound calls for every expiring contract. Over 700+ monthly support tickets were dedicated solely to 'What has changed in my contract?'"
+        ],
+        pullQuote: {
+          text: "Transform a high-friction, offline negotiation into a seamless digital experience where merchants could review terms and legally sign in clicks, not hours.",
+          label: "The Goal"
+        }
+      },
+      {
+        title: "Discovery & Strategy",
+        content: "Uncovering the 'Black Box' — Collaborating with UX Research under the dMPX framework, we conducted 8 merchant interviews and analysed 12 months of data.",
+        bullets: [
+          "Key Insight: 'I never know when my contract is expiring until I get a call. By then, I'm scrambling.' — Retail Merchant",
+          "The Strategic Shift: We realised the solution wasn't just a 'Sign Here' button—it had to be a proactive communication strategy that engaged merchants before the deadline."
+        ],
+        pullQuote: {
+          text: "I never know when my contract is expiring until I get a call. By then, I'm scrambling.",
+          label: "Merchant Interview"
+        }
+      },
+      {
+        title: "The 'Value-First' Notification Strategy",
+        content: "To combat 'last-minute panic,' I devised a 30-14-1 day notification cadence. Instead of generic 'Expiring Soon' alerts, each touchpoint was designed to reinforce value before asking for a commitment:",
+        bullets: [
+          "Day 30 (Value): 'See how Worldpay has supported your business this year' (Relationship building).",
+          "Day 14 (Offer): 'Your exclusive renewal offer is ready to view' (Transparency).",
+          "Day 1 (Urgency): 'Final reminder: Lock in your rate today' (Action)."
+        ],
+        pullQuote: {
+          text: "During ideation, we explored a 'Blue Sky' concept using smart contracts for auto-renewal based on transaction health. While this was our 'North Star' for a zero-friction future, immediate legal consent requirements demanded a manual interaction.",
+          label: "Strategic Vision"
+        }
+      },
+      {
+        title: "The Solution",
+        content: "A Hybrid Architecture for Complex Decisions — We rejected a 'one-size-fits-all' approach. Instead, I designed a Hybrid Architecture to balance focus with friction:",
+        bullets: [
+          "The Hook (Modal): A focused, interruptive modal presents the high-level offer (e.g., 'Rate locked for 12 months'). This grabs attention without a full context switch.",
+          "The Work (Full Page Journey): Engaging the offer transitions the user to a dedicated Review → Payment → Sign flow. This provided the screen real estate needed for complex legal comparison.",
+          "'Diff Table' vs. PDF Scroll: Instead of forcing users to parse a dense PDF, I designed a comparison table that visually highlighted only the changes (e.g., Term Length, monthly price and breakdown and critical user details for review).",
+          "Embedded DocuSign: To solve authentication constraints, I implemented an embedded DocuSign integration. This kept merchants inside the trusted Worldpay dashboard rather than bouncing them to an external email thread.",
+          "Proactive Triage: We implemented a 30-14-1 day notification strategy, creating a natural sense of urgency that respected the merchant's time."
+        ]
+      },
+      {
+        title: "Execution & Validation",
+        content: "Iterating Based on Data (n=8 Usability Tests) — Testing revealed an average completion time of 2 minutes (down from 10+), but uncovered two critical issues that I solved in the final design:",
+        bullets: [
+          "Solving 'Sticker Shock': Early testing showed that presenting complex annual totals caused hesitation. I redesigned the financial summary to match the SMB mental model of monthly cash flow.",
+          "Monthly Anchor: Displayed a clear £16.50/mo anchor price with a dynamic 'You save an estimated £[Amount]' label.",
+          "The 'Locked Data' Escape Hatch: Users who spotted errors in pre-populated legal data felt 'trapped.' I added a prominent 'Need to make changes?' block with a specific support path.",
+          "The 'Discrepancy' Panic: The contract generated by the backend often shows the standard terminal hire fee (e.g., £20), while the offer is a promotional £1. I added a Context Banner explaining why the numbers differ."
+        ]
+      }
+    ],
+    impacts: [
+      { metric: "Speed", value: "40%", description: "Reduction in renewal completion time (Avg 3.2 days vs. 5+ days)" },
+      { metric: "Efficiency", value: "35%", description: "Decrease in renewal-related support tickets (from 450 to 290 monthly)" },
+      { metric: "Retention", value: "82%", description: "Same-cycle completion rate, exceeding the 75% target" },
+      { metric: "NPS", value: "42 → 68", description: "Improved Net Promoter Score" },
+      { metric: "Savings", value: "$180k", description: "Estimated annual savings based on reduced support handling time" }
+    ],
+    reflection: "Account managers reported spending 60% less time on routine renewal coordination. This project demonstrated that digitising legacy processes isn't just about moving forms online—it's about understanding the emotional journey of high-stakes decisions and designing transparency into every step."
   },
   {
     id: "design-with-icons",
