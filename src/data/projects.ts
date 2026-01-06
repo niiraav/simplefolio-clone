@@ -16,9 +16,6 @@ import gophrUserInterviews from "@/assets/gophr-user-interviews.png";
 import teamsHero from "@/assets/teams-hero.gif";
 import teamsWorkNutshell from "@/assets/teams-work-nutshell.png";
 import worldpayHero from "@/assets/worldpay-hero.png";
-import worldpayModal from "@/assets/worldpay-modal.png";
-import worldpayContractDetails from "@/assets/worldpay-contract-details.png";
-import worldpayReviewSign from "@/assets/worldpay-review-sign.png";
 
 export interface GalleryImage {
   src: string;
@@ -55,7 +52,6 @@ export interface Project {
   solution: string;
   liveUrl?: string;
   images: string[];
-  heroGalleryImages?: GalleryImage[];
   sections?: ProjectSection[];
   impacts?: ProjectImpact[];
   impactImage?: GalleryImage;
@@ -233,7 +229,7 @@ export const projects: Project[] = [
   },
   {
     id: "worldpay-contract-renewals",
-    title: "Simplifying Merchant Renewals",
+    title: "Digitising the 'Black Box' of Contract Renewals",
     description: "Transforming a high-friction, offline negotiation into a seamless digital experience where merchants could review terms and legally sign in clicks, not hours.",
     image: worldpayHero,
     role: "Lead Product Designer (Worldpay dMPX)",
@@ -242,11 +238,6 @@ export const projects: Project[] = [
     overview: "For years, Worldpay's SMB merchants faced a fragmented, manual renewal process. When a contract ended, there was no digital path to renew—only a forced, 7-10 minute phone call with an agent.",
     solution: "Transform a high-friction, offline negotiation into a seamless digital experience where merchants could review terms and legally sign in clicks, not hours.",
     images: [worldpayHero],
-    heroGalleryImages: [
-      { src: worldpayModal, alt: "Renewal offer modal presenting competitive rates and savings with clear call-to-action" },
-      { src: worldpayContractDetails, alt: "Contract details page showing monthly payments, terms, and merchant information" },
-      { src: worldpayReviewSign, alt: "Review and sign page with DocuSign integration and promotional discount explanation" }
-    ],
     sections: [
       {
         title: "The Challenge",
