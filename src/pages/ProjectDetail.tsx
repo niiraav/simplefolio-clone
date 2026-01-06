@@ -82,7 +82,7 @@ const ProjectDetail = () => {
                   {/* Bullets */}
                   {section.bullets && section.bullets.length > 0 && <ul className="space-y-3 mb-6">
                       {section.bullets.map((bullet, bulletIndex) => <li key={bulletIndex} className="flex items-start gap-3 text-muted-foreground">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-gray-300" />
                           <span>{bullet}</span>
                         </li>)}
                     </ul>}
