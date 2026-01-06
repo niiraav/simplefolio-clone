@@ -232,7 +232,7 @@ export const projects: Project[] = [
   },
   {
     id: "worldpay-contract-renewals",
-    title: "Digitising the 'Black Box' of Contract Renewals",
+    title: "Simplifying Merchant Renewals",
     description: "Transforming a high-friction, offline negotiation into a seamless digital experience where merchants could review terms and legally sign in clicks, not hours.",
     image: worldpayHero,
     role: "Lead Product Designer (Worldpay dMPX)",
