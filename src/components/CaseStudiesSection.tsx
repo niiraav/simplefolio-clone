@@ -2,6 +2,38 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 
+// Company logo configurations
+const companyLogos: Record<string, { name: string; logo: string }> = {
+  "worldpay-contract-renewals": {
+    name: "Worldpay",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Worldpay_logo.svg/320px-Worldpay_logo.svg.png"
+  },
+  "gophr-logistics": {
+    name: "Gophr",
+    logo: "https://images.crunchbase.com/image/upload/c_pad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1444978295/z2cwcdh9zxyffzlwzjwd.png"
+  },
+  "microsoft-teams-ecosystem": {
+    name: "Microsoft",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png"
+  }
+};
+
+const CompanyTag = ({ projectId }: { projectId: string }) => {
+  const company = companyLogos[projectId];
+  if (!company) return null;
+
+  return (
+    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-background/80 backdrop-blur-sm border border-border rounded-full">
+      <img 
+        src={company.logo} 
+        alt={`${company.name} logo`}
+        className="h-4 w-auto object-contain"
+      />
+      <span className="text-xs font-medium text-foreground">{company.name}</span>
+    </div>
+  );
+};
+
 const CaseStudyCard = ({
   id,
   title,
@@ -18,12 +50,16 @@ const CaseStudyCard = ({
       {/* Outer Card Container with rounded border */}
       <div className="rounded-[32px] border p-4 border-border bg-primary-foreground py-[24px] px-[24px]">
         {/* Gray Image Container */}
-        <div className="rounded-[24px] overflow-hidden">
+        <div className="rounded-[24px] overflow-hidden relative">
           <img 
             src={image} 
             alt={title} 
             className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105" 
           />
+          {/* Company Tag overlay */}
+          <div className="absolute top-4 left-4">
+            <CompanyTag projectId={id} />
+          </div>
         </div>
         
         {/* Content below image container */}
