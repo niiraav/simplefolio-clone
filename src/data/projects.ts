@@ -16,6 +16,7 @@ import gophrUserInterviews from "@/assets/gophr-user-interviews.png";
 import teamsHero from "@/assets/teams-hero.gif";
 import teamsWorkNutshell from "@/assets/teams-work-nutshell.png";
 import worldpayHero from "@/assets/worldpay-hero.png";
+import worldpayCover from "@/assets/worldpay-cover.png";
 import worldpayModal from "@/assets/worldpay-modal.png";
 import worldpayContractDetails from "@/assets/worldpay-contract-details.png";
 import worldpaySign from "@/assets/worldpay-sign.png";
@@ -235,7 +236,7 @@ export const projects: Project[] = [
     id: "worldpay-contract-renewals",
     title: "Simplifying Merchant Renewals",
     description: "Transforming a high-friction, offline negotiation into a seamless digital experience where merchants could review terms and legally sign in clicks, not hours.",
-    image: worldpayHero,
+    image: worldpayCover,
     role: "Lead Product Designer (Worldpay dMPX)",
     timeline: "14 weeks (March–June 2025)",
     tools: ["Figma", "DocuSign", "Jira", "Miro"],
