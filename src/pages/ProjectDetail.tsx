@@ -19,7 +19,6 @@ const ProjectDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
-
   if (!project) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
@@ -67,17 +66,10 @@ const ProjectDetail = () => {
 
           {/* Hero Image or Carousel */}
           <div className="mb-16">
-            {project.heroCarouselImages && project.heroCarouselImages.length > 0 ? (
-              <SectionImageCarousel 
-                images={project.heroCarouselImages} 
-                title={project.title} 
-              />
-            ) : (
-              <ClickableImage image={{
-                src: project.images[0],
-                alt: project.title
-              }} />
-            )}
+            {project.heroCarouselImages && project.heroCarouselImages.length > 0 ? <SectionImageCarousel images={project.heroCarouselImages} title={project.title} /> : <ClickableImage image={{
+            src: project.images[0],
+            alt: project.title
+          }} />}
           </div>
 
           {isDetailedCaseStudy ? <>
@@ -146,57 +138,9 @@ const ProjectDetail = () => {
                   <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
                     Reflection
                   </h2>
-                  <div className="text-muted-foreground leading-relaxed">
-                    {(() => {
-                      const paragraphs = project.reflection.split('\n\n');
-                      const numberedItems: { number: string; content: string; lines: string[] }[] = [];
-                      const otherParagraphs: { idx: number; content: string; isHeader: boolean; header?: string; rest?: string }[] = [];
-                      
-                      paragraphs.forEach((paragraph, idx) => {
-                        const numberedMatch = paragraph.match(/^(\d+)\.\s+(.+)/);
-                        if (numberedMatch) {
-                          const [, number, content] = numberedMatch;
-                          const lines = content.split('\n');
-                          numberedItems.push({ number, content, lines });
-                        } else if (paragraph.includes(':') && paragraph.split(':')[0].length < 30) {
-                          const [header, ...rest] = paragraph.split(':');
-                          otherParagraphs.push({ idx, content: paragraph, isHeader: true, header, rest: rest.join(':') });
-                        } else {
-                          otherParagraphs.push({ idx, content: paragraph, isHeader: false });
-                        }
-                      });
-                      
-                      return (
-                        <>
-                          {otherParagraphs.map((p) => 
-                            p.isHeader ? (
-                              <p key={p.idx} className="mb-4">
-                                <span className="font-semibold text-foreground">{p.header}:</span>
-                                {p.rest}
-                              </p>
-                            ) : (
-                              <p key={p.idx} className="mb-4 italic">{p.content}</p>
-                            )
-                          )}
-                          {numberedItems.length > 0 && (
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-                              {numberedItems.map((item, idx) => (
-                                <div key={idx} className="flex gap-3">
-                                  <span className="font-semibold text-foreground">{item.number}.</span>
-                                  <div>
-                                    <span className="font-semibold text-foreground">{item.lines[0]}</span>
-                                    {item.lines.slice(1).map((line, lineIdx) => (
-                                      <p key={lineIdx} className="mt-1">{line}</p>
-                                    ))}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </>
-                      );
-                    })()}
-                  </div>
+                  <p className="text-muted-foreground leading-relaxed italic">
+                    {project.reflection}
+                  </p>
                   
                   {/* Reflection Images Carousel */}
                   {project.reflectionImages && project.reflectionImages.length > 0 && <SectionImageCarousel images={project.reflectionImages} title="Reflection" />}
@@ -219,7 +163,7 @@ const ProjectDetail = () => {
             }} />
                 </div>}
 
-              <div className="mb-16">
+              <div className="mb-16 text-secondary-foreground">
                 <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
                   Solution
                 </h2>
