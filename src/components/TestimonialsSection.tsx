@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
     setCurrentIndex(prev => (prev - 1 + testimonials.length) % testimonials.length);
   };
   const currentTestimonial = testimonials[currentIndex];
-  return <section id="testimonials" className="py-20 max-w-[510px] mx-auto px-0">
+  return <section id="testimonials" className="py-20 max-w-[510px] mx-auto px-4">
         <h2 className="text-2xl font-bold text-foreground text-left mb-6 font-serif">
           Testimonials
         </h2>

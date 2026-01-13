@@ -59,7 +59,7 @@ const experiences: Experience[] = [{
   iconColor: "text-cyan-600"
 }];
 const ExperienceSection = () => {
-  return <section id="experience" className="py-20 max-w-[510px] mx-auto px-0 bg-primary-foreground">
+  return <section id="experience" className="py-20 max-w-[510px] mx-auto px-4 bg-primary-foreground">
         <h2 className="text-2xl font-bold text-foreground text-left mb-6 font-serif">
           Work Experience
         </h2>

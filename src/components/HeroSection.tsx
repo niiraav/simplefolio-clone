@@ -9,7 +9,7 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="home" className="min-h-[70vh] flex-col pt-28 pb-20 max-w-[510px] mx-auto px-[2px] flex items-start justify-start">
+  return <section id="home" className="min-h-[70vh] flex-col pt-28 pb-20 max-w-[510px] mx-auto px-4 flex items-start justify-start">
         {/* Avatar */}
         <div className="mb-8 border-primary">
           <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-foreground">
