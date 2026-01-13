@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import project1 from "@/assets/project-1.png";
 import project2 from "@/assets/project-2.png";
 import project3 from "@/assets/project-3.png";
@@ -13,6 +14,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  caseStudyId?: string;
 }
 
 const projects: Project[] = [
@@ -21,6 +23,7 @@ const projects: Project[] = [
     title: "Gophr Logistics Dashboard",
     description: "Real-time delivery tracking and job management",
     image: project1,
+    caseStudyId: "gophr-logistics",
   },
   {
     id: 2,
@@ -33,6 +36,7 @@ const projects: Project[] = [
     title: "Contract Renewals",
     description: "Worldpay contract review and confirmation flow",
     image: project3,
+    caseStudyId: "worldpay-contract-renewals",
   },
   {
     id: 4,
@@ -73,18 +77,32 @@ const projects: Project[] = [
 ];
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  const content = (
+    <div className="relative overflow-hidden rounded-3xl bg-card shadow-card transition-all duration-300 group-hover:shadow-card-hover group-hover:-translate-y-1">
+      <div className="aspect-[4/3] overflow-hidden">
+        <img 
+          src={project.image} 
+          alt={project.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+    </div>
+  );
+
+  if (project.caseStudyId) {
+    return (
+      <Link 
+        to={`/project/${project.caseStudyId}`}
+        className="group relative w-[280px] md:w-[360px] lg:w-[420px] flex-shrink-0 cursor-pointer"
+      >
+        {content}
+      </Link>
+    );
+  }
+
   return (
     <div className="group relative w-[280px] md:w-[360px] lg:w-[420px] flex-shrink-0">
-      <div className="relative overflow-hidden rounded-3xl bg-card shadow-card transition-all duration-300 group-hover:shadow-card-hover group-hover:-translate-y-1">
-        {/* Image */}
-        <div className="aspect-[4/3] overflow-hidden">
-          <img 
-            src={project.image} 
-            alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-      </div>
+      {content}
     </div>
   );
 };
