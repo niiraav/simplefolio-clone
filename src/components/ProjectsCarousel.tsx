@@ -5,6 +5,7 @@ import project4 from "@/assets/project-4.png";
 import project5 from "@/assets/project-5.png";
 import project6 from "@/assets/project-6.png";
 import project7 from "@/assets/project-7.png";
+import project8 from "@/assets/project-8.png";
 
 interface Project {
   id: number;
@@ -34,8 +35,8 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Payment Links Dashboard",
-    description: "Worldpay merchant dashboard and analytics",
+    title: "Strava Redesign",
+    description: "Fitness tracking app redesign concept",
     image: project4,
   },
   {
@@ -55,6 +56,12 @@ const projects: Project[] = [
     title: "Shopify Integration",
     description: "E-commerce store management dashboard",
     image: project7,
+  },
+  {
+    id: 8,
+    title: "Payment Links Dashboard",
+    description: "Worldpay merchant dashboard and analytics",
+    image: project8,
   },
 ];
 
