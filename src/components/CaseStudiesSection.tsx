@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 import worldpayLogo from "@/assets/worldpay-logo.png";
 import gophrLogo from "@/assets/gophr-logo.png";
+import buzzbingoLogo from "@/assets/buzzbingo-logo.png";
 
 // Company logo configurations
 const companyLogos: Record<string, { name: string; logo: string }> = {
@@ -17,6 +18,10 @@ const companyLogos: Record<string, { name: string; logo: string }> = {
   "microsoft-teams-ecosystem": {
     name: "Microsoft",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png"
+  },
+  "buzz-bingo-app": {
+    name: "Buzz Bingo",
+    logo: buzzbingoLogo
   }
 };
 

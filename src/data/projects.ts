@@ -1,6 +1,7 @@
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import buzzbingoLogo from "@/assets/buzzbingo-logo.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -317,6 +318,121 @@ export const projects: Project[] = [
       { metric: "TrustPilot", value: "4.1★", description: "Improved platform rating" }
     ],
     reflection: "Due to strict NDA constraints, I cannot publicly display specific financial or internal dashboard designs. However, I can walk through generalised 'white-label' workflows and my specific contribution to the Fluent design adoption process in a private interview."
+  },
+  {
+    id: "buzz-bingo-app",
+    title: "Modernising a Legacy Bingo App for All Ages",
+    description: "Redesigning a new Bingo Buddy app — Transforming a buggy experience into an accessible, self-service platform for users aged 25-70.",
+    image: buzzbingoLogo,
+    role: "Senior UX/UI Designer",
+    timeline: "12 Weeks (July – September 2019)",
+    tools: ["Figma", "InVision Freehand", "UserZoom", "Notion", "ProtoPie"],
+    overview: "Buzz Bingo, one of the UK's largest bingo operators (WhichBingo's Best Bingo Site of the Year), had a mobile app problem. The legacy Bingo Buddy app was plagued by bugs, crashes, and a confusing navigation system that frustrated users aged 25-70—a demographic that demanded both simplicity and accessibility.",
+    solution: "Transform the legacy app into an accessible, self-service platform that allows users to manage their accounts (wallet top-ups, voucher redemption, session discovery) without ever leaving their bingo table.",
+    images: [buzzbingoLogo],
+    sections: [
+      {
+        title: "The Challenge (Situation)",
+        content: "A Buggy Experience Hurting Retention — Club visitors couldn't top up their accounts or redeem vouchers without leaving their seats to queue at the checkout counter. This disrupted their gaming experience and created operational bottlenecks during peak hours.",
+        bullets: [
+          "Complex, unpredictable navigation that confused users",
+          "Poor content hierarchy making information difficult to scan",
+          "Bugs causing slowness and occasional crashes",
+          "Needlessly complicated user journeys for simple tasks"
+        ],
+        pullQuote: {
+          text: "Transform the legacy app into an accessible, self-service platform that allows users to manage their accounts without ever leaving their bingo table.",
+          label: "The Goal"
+        }
+      },
+      {
+        title: "Discovery & Research",
+        content: "Uncovering the 'Queue Anxiety' — To understand the friction points, I conducted a multi-phase discovery process including a heuristic audit, user interviews, and competitive analysis.",
+        bullets: [
+          "Heuristic Audit: I screenshotted every UI in the app and annotated usability concerns, stakeholder questions, and improvement ideas.",
+          "User Interviews (n=8): Over one week, I interviewed customers aged 25-70 about their in-club experience via phone and video calls.",
+          "Key Insight: 'I hate missing my game to wait in line.' The queue wasn't just inconvenient—it caused anxiety about missing numbers during active games.",
+          "Jakob's Law in Action: Users expected the app to work like other familiar apps (banking, food delivery). When it didn't, they lost trust.",
+          "Age Diversity = Accessibility Priority: With users spanning 45 years of age range, accessibility (large touch targets, high contrast, clear iconography) wasn't optional—it was critical."
+        ],
+        galleryImages: [
+          { src: "/placeholder.svg", alt: "Annotated screenshots of old app showing usability issues" },
+          { src: "/placeholder.svg", alt: "Competitive analysis board showing wallet flows from banking apps" }
+        ],
+        pullQuote: {
+          text: "I hate missing my game to wait in line.",
+          label: "User Interview Insight"
+        }
+      },
+      {
+        title: "Strategy & Definition",
+        content: "Defining the 'Frictionless Club Experience' — I synthesised findings into a clear strategy with three design pillars: Accessibility First (design for ages 25-70 with WCAG 2.1 compliance), Self-Service (enable wallet top-ups, voucher redemption, and session booking without staff assistance), and Familiar Patterns (follow Jakob's Law—use conventions from widely-adopted apps).",
+        bullets: [
+          "Unified wallet system replacing fragmented balance views",
+          "Streamlined voucher redemption flow",
+          "Enhanced session discovery with filters (date, time, location)",
+          "Upgrade path for legacy users migrating to the new backend"
+        ],
+        galleryImages: [
+          { src: "/placeholder.svg", alt: "Before/After Information Architecture sitemap" }
+        ],
+        pullQuote: {
+          text: "Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.",
+          label: "Jakob's Law"
+        }
+      },
+      {
+        title: "Execution: Building a Living Design System",
+        content: "Rather than just 'redesigning screens,' I created a scalable design system to future-proof the product.",
+        bullets: [
+          "Typography: I selected Qanelas Soft, a typeface with extensive documentation for legibility and accessibility across age groups.",
+          "Iconography: I used Material Design icons to maximise recognisability across languages and backgrounds.",
+          "Component Library: I built reusable components (buttons, cards, navigation bars) that reduced design-to-dev handoff time by 60%."
+        ],
+        galleryImages: [
+          { src: "/placeholder.svg", alt: "Style guide showing typography scale, colour system, and icon library" }
+        ]
+      },
+      {
+        title: "Iterating Based on Usability Testing",
+        content: "I conducted moderated testing via UserZoom, starting with low-fidelity wireframes and progressing to high-fidelity prototypes. Each iteration addressed specific failure points:",
+        bullets: [
+          "Iteration 1 — The 'Hidden Navigation' Fix: Increased the size and contrast of the bottom nav bar, adding label text beneath icons.",
+          "Iteration 2 — The 'Top-Up Confusion' Fix: Redesigned the flow as a linear, step-by-step journey with clear progress indicators.",
+          "Iteration 3 — The 'Balance Visibility' Fix: Added a persistent balance indicator in the app header, visible from any screen.",
+          "Iteration 4 — The 'Upgrade Messaging' Fix: Designed a full-screen, benefit-focused onboarding modal that explained the upgrade value proposition.",
+          "Iteration 5 — The 'Daub Interaction' Delight: Added a tactile 'daub' interaction with haptic feedback and sound effects, recreating the physical dauber experience."
+        ],
+        galleryImages: [
+          { src: "/placeholder.svg", alt: "Wireframe progression showing navigation iterations" },
+          { src: "/placeholder.svg", alt: "Interactive prototype showing daub animation" }
+        ]
+      },
+      {
+        title: "Final Designs",
+        content: "A Self-Service Bingo Hub — The redesigned app transformed the club experience by putting control in users' hands.",
+        bullets: [
+          "Home Screen: Personalised greeting, session times, jackpot cards, quick access to key features",
+          "Vouchers Screen: Visual cards with clear expiry dates, filters (View all, Your club, Saved)",
+          "Wallet Screen: Large balance display (£4,720.00), quick top-up buttons, recent transactions",
+          "Promotions Screen: Bold visual cards with clear CTAs and engaging imagery",
+          "Quick Top-Up: Preset amounts (£10, £20, £50, £100) eliminated form friction for repeat users",
+          "Session Discovery: Filters by date, time, and location replaced endless scrolling",
+          "Social Features: Recent winners board and friend connections increased engagement"
+        ],
+        galleryImages: [
+          { src: "/placeholder.svg", alt: "4-screen hero shot showing Home, Vouchers, Wallet, and Promotions screens" },
+          { src: "/placeholder.svg", alt: "Mobile screens showing session discovery filters and social features" }
+        ]
+      }
+    ],
+    impacts: [
+      { metric: "DAU", value: "3x", description: "Increase in Daily Active Users" },
+      { metric: "App Growth", value: "160%", description: "Overall app growth post-launch" },
+      { metric: "Efficiency", value: "60%", description: "Faster design-to-dev time due to living design system" }
+    ],
+    impactImage: { src: "/placeholder.svg", alt: "Metrics dashboard or before/after comparison chart" },
+    reflection: "The living design system was the project's secret weapon. By investing time upfront in reusable components, we accelerated every subsequent phase and ensured consistency across all screens.\n\nWhat I'd Do Differently:\n\n1. Accessibility from Day One — I audited for accessibility after initial designs, which created rework. In future projects, I'd include users with cognitive and physical disabilities in early-stage personas and testing.\n\n2. Search Analytics — I would use search analytics to reveal what users search for but can't find in navigation. This data would inform information architecture decisions earlier in the process.\n\n3. Quantitative Baselines — Whilst we tracked DAU growth post-launch, I wish we'd established clearer pre-launch baselines for support ticket volume and task completion times to strengthen our impact story."
   },
   {
     id: "design-with-icons",
