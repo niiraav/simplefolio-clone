@@ -11,6 +11,13 @@ import buzzbingoStyleguide from "@/assets/buzzbingo-styleguide.png";
 import buzzbingoIASitemap from "@/assets/buzzbingo-ia-sitemap.png";
 import buzzbingoVouchersIterations from "@/assets/buzzbingo-vouchers-iterations.png";
 import buzzbingoClubIterations from "@/assets/buzzbingo-club-iterations.png";
+import buzzbingoHeroMockup from "@/assets/buzzbingo-hero-mockup.png";
+import buzzbingoClubScreens from "@/assets/buzzbingo-club-screens.png";
+import buzzbingoWalletScreens from "@/assets/buzzbingo-wallet-screens.png";
+import buzzbingoVouchersScreens from "@/assets/buzzbingo-vouchers-screens.png";
+import buzzbingoPromotionsScreens from "@/assets/buzzbingo-promotions-screens.png";
+import buzzbingoSettingsScreens from "@/assets/buzzbingo-settings-screens.png";
+import buzzbingoClubfinderScreens from "@/assets/buzzbingo-clubfinder-screens.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -432,8 +439,13 @@ export const projects: Project[] = [
           "Social Features: Recent winners board and friend connections increased engagement"
         ],
         galleryImages: [
-          { src: "/placeholder.svg", alt: "4-screen hero shot showing Home, Vouchers, Wallet, and Promotions screens" },
-          { src: "/placeholder.svg", alt: "Mobile screens showing session discovery filters and social features" }
+          { src: buzzbingoHeroMockup, alt: "Hero mockup showing 4 phones with Home, Vouchers, Wallet, and Promotions screens in bingo club setting" },
+          { src: buzzbingoClubScreens, alt: "Club page screens showing Home with jackpots, Info with facilities and opening times, and Location with map" },
+          { src: buzzbingoWalletScreens, alt: "Wallet screens showing balance display with quick top-up buttons and top-up flow with payment confirmation" },
+          { src: buzzbingoVouchersScreens, alt: "Vouchers screen with filters and voucher list, and voucher detail page with barcode redemption" },
+          { src: buzzbingoPromotionsScreens, alt: "Promotions screen with bold visual cards and promotion detail page with terms and conditions" },
+          { src: buzzbingoSettingsScreens, alt: "Settings screen with user profile and support options, and transaction history with filter functionality" },
+          { src: buzzbingoClubfinderScreens, alt: "Club finder with search and location list, and home club selection modal" }
         ]
       }
     ],
