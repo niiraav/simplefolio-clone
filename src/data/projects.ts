@@ -5,7 +5,6 @@ import buzzbingoLogo from "@/assets/buzzbingo-logo.png";
 import buzzbingoCover from "@/assets/buzzbingo-cover.png";
 import buzzbingoHeroScreens from "@/assets/buzzbingo-hero-screens.png";
 import buzzbingoCompetitiveAnalysis from "@/assets/buzzbingo-competitive-analysis.png";
-import buzzbingoUserFlow from "@/assets/buzzbingo-user-flow.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -361,8 +360,7 @@ export const projects: Project[] = [
         ],
         galleryImages: [
           { src: buzzbingoHeroScreens, alt: "4-screen hero shot showing Home, Sessions, Promotions and Wallet screens" },
-          { src: buzzbingoCompetitiveAnalysis, alt: "Competitive analysis board showing wallet flows from banking and entertainment apps" },
-          { src: buzzbingoUserFlow, alt: "User flow diagram showing app navigation structure from onboarding through wallet, vouchers and promotions" }
+          { src: buzzbingoCompetitiveAnalysis, alt: "Competitive analysis board showing wallet flows from banking and entertainment apps" }
         ],
         pullQuote: {
           text: "I hate missing my game to wait in line.",
