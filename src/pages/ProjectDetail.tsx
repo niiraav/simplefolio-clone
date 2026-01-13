@@ -146,9 +146,38 @@ const ProjectDetail = () => {
                   <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
                     Reflection
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed italic">
-                    {project.reflection}
-                  </p>
+                  <div className="text-muted-foreground leading-relaxed">
+                    {project.reflection.split('\n\n').map((paragraph, idx) => {
+                      // Check if paragraph starts with a number (numbered list item)
+                      const numberedMatch = paragraph.match(/^(\d+)\.\s+(.+)/);
+                      if (numberedMatch) {
+                        const [, number, content] = numberedMatch;
+                        const lines = content.split('\n');
+                        return (
+                          <div key={idx} className="flex gap-3 mb-3">
+                            <span className="font-semibold text-foreground">{number}.</span>
+                            <div>
+                              <span className="font-semibold text-foreground">{lines[0]}</span>
+                              {lines.slice(1).map((line, lineIdx) => (
+                                <p key={lineIdx} className="mt-1">{line}</p>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      }
+                      // Check if it's a header like "What Worked:" or "What I'd Do Differently:"
+                      if (paragraph.includes(':') && paragraph.split(':')[0].length < 30) {
+                        const [header, ...rest] = paragraph.split(':');
+                        return (
+                          <p key={idx} className="mb-4">
+                            <span className="font-semibold text-foreground">{header}:</span>
+                            {rest.join(':')}
+                          </p>
+                        );
+                      }
+                      return <p key={idx} className="mb-4 italic">{paragraph}</p>;
+                    })}
+                  </div>
                   
                   {/* Reflection Images Carousel */}
                   {project.reflectionImages && project.reflectionImages.length > 0 && <SectionImageCarousel images={project.reflectionImages} title="Reflection" />}
