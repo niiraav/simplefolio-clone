@@ -2,6 +2,7 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import buzzbingoLogo from "@/assets/buzzbingo-logo.png";
+import buzzbingoCover from "@/assets/buzzbingo-cover.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -323,13 +324,13 @@ export const projects: Project[] = [
     id: "buzz-bingo-app",
     title: "Modernising a Legacy Bingo App for All Ages",
     description: "Redesigning a new Bingo Buddy app — Transforming a buggy experience into an accessible, self-service platform for users aged 25-70.",
-    image: buzzbingoLogo,
+    image: buzzbingoCover,
     role: "Senior UX/UI Designer",
     timeline: "12 Weeks (July – September 2019)",
     tools: ["Figma", "InVision Freehand", "UserZoom", "Notion", "ProtoPie"],
     overview: "Buzz Bingo, one of the UK's largest bingo operators (WhichBingo's Best Bingo Site of the Year), had a mobile app problem. The legacy Bingo Buddy app was plagued by bugs, crashes, and a confusing navigation system that frustrated users aged 25-70—a demographic that demanded both simplicity and accessibility.",
     solution: "Transform the legacy app into an accessible, self-service platform that allows users to manage their accounts (wallet top-ups, voucher redemption, session discovery) without ever leaving their bingo table.",
-    images: [buzzbingoLogo],
+    images: [buzzbingoCover],
     sections: [
       {
         title: "The Challenge (Situation)",
