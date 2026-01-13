@@ -6,6 +6,7 @@ import project5 from "@/assets/project-5.png";
 import project6 from "@/assets/project-6.png";
 import project7 from "@/assets/project-7.png";
 import project8 from "@/assets/project-8.png";
+import project9 from "@/assets/project-9.png";
 
 interface Project {
   id: number;
@@ -17,8 +18,8 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Terminal Order Tracking",
-    description: "Worldpay dashboard for terminal returns and tracking",
+    title: "Gophr Logistics Dashboard",
+    description: "Real-time delivery tracking and job management",
     image: project1,
   },
   {
@@ -62,6 +63,12 @@ const projects: Project[] = [
     title: "Payment Links Dashboard",
     description: "Worldpay merchant dashboard and analytics",
     image: project8,
+  },
+  {
+    id: 9,
+    title: "Terminal Order Tracking",
+    description: "Worldpay dashboard for terminal returns and tracking",
+    image: project9,
   },
 ];
 
