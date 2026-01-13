@@ -1,16 +1,18 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
+import worldpayLogo from "@/assets/worldpay-logo.png";
+import gophrLogo from "@/assets/gophr-logo.png";
 
 // Company logo configurations
 const companyLogos: Record<string, { name: string; logo: string }> = {
   "worldpay-contract-renewals": {
     name: "Worldpay",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Worldpay_logo.svg/320px-Worldpay_logo.svg.png"
+    logo: worldpayLogo
   },
   "gophr-logistics": {
     name: "Gophr",
-    logo: "https://images.crunchbase.com/image/upload/c_pad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1444978295/z2cwcdh9zxyffzlwzjwd.png"
+    logo: gophrLogo
   },
   "microsoft-teams-ecosystem": {
     name: "Microsoft",
