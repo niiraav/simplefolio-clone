@@ -3,6 +3,8 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import buzzbingoLogo from "@/assets/buzzbingo-logo.png";
 import buzzbingoCover from "@/assets/buzzbingo-cover.png";
+import buzzbingoHeroScreens from "@/assets/buzzbingo-hero-screens.png";
+import buzzbingoCompetitiveAnalysis from "@/assets/buzzbingo-competitive-analysis.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -357,8 +359,8 @@ export const projects: Project[] = [
           "Age Diversity = Accessibility Priority: With users spanning 45 years of age range, accessibility (large touch targets, high contrast, clear iconography) wasn't optional—it was critical."
         ],
         galleryImages: [
-          { src: "/placeholder.svg", alt: "Annotated screenshots of old app showing usability issues" },
-          { src: "/placeholder.svg", alt: "Competitive analysis board showing wallet flows from banking apps" }
+          { src: buzzbingoHeroScreens, alt: "4-screen hero shot showing Home, Sessions, Promotions and Wallet screens" },
+          { src: buzzbingoCompetitiveAnalysis, alt: "Competitive analysis board showing wallet flows from banking and entertainment apps" }
         ],
         pullQuote: {
           text: "I hate missing my game to wait in line.",
