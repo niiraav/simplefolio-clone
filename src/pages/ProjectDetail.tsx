@@ -19,7 +19,6 @@ const ProjectDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
-
   if (!project) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
@@ -67,17 +66,10 @@ const ProjectDetail = () => {
 
           {/* Hero Image or Carousel */}
           <div className="mb-16">
-            {project.heroCarouselImages && project.heroCarouselImages.length > 0 ? (
-              <SectionImageCarousel 
-                images={project.heroCarouselImages} 
-                title={project.title} 
-              />
-            ) : (
-              <ClickableImage image={{
-                src: project.images[0],
-                alt: project.title
-              }} />
-            )}
+            {project.heroCarouselImages && project.heroCarouselImages.length > 0 ? <SectionImageCarousel images={project.heroCarouselImages} title={project.title} /> : <ClickableImage image={{
+            src: project.images[0],
+            alt: project.title
+          }} />}
           </div>
 
           {isDetailedCaseStudy ? <>
@@ -94,12 +86,7 @@ const ProjectDetail = () => {
                   </p>
 
                   {/* Bullets */}
-                  {section.bullets && section.bullets.length > 0 && <ul className="space-y-3 mb-6">
-                      {section.bullets.map((bullet, bulletIndex) => <li key={bulletIndex} className="flex items-start gap-3 text-muted-foreground">
-                          <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-gray-300" />
-                          <span>{bullet}</span>
-                        </li>)}
-                    </ul>}
+                  {section.bullets && section.bullets.length > 0}
 
                   {/* Pull Quote */}
                   {section.pullQuote && <blockquote className="border-l-4 border-primary pl-6 py-4 my-8 bg-secondary/30 rounded-r-lg">
