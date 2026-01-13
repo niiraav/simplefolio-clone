@@ -33,6 +33,7 @@ import gophrUserReviews from "@/assets/gophr-user-reviews.png";
 import gophrCompetitorAnalysis from "@/assets/gophr-competitor-analysis.png";
 import gophrUserInterviews from "@/assets/gophr-user-interviews.png";
 import teamsHero from "@/assets/teams-hero.gif";
+import teamsCover from "@/assets/teams-cover.png";
 import teamsWorkNutshell from "@/assets/teams-work-nutshell.png";
 import worldpayHero from "@/assets/worldpay-hero.png";
 import worldpayCover from "@/assets/worldpay-cover.png";
@@ -272,7 +273,7 @@ export const projects: Project[] = [
     id: "microsoft-teams-ecosystem",
     title: "Scaling the Microsoft Teams Partner Ecosystem",
     description: "Empowering major partners (ISVs) to build high-quality, native-feeling apps directly within Teams.",
-    image: teamsHero,
+    image: teamsCover,
     role: "Senior UX & Interaction Designer",
     timeline: "Nov 2022 – Dec 2023",
     tools: ["Figma", "MS Teams", "ProtoPie"],

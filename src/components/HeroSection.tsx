@@ -13,7 +13,7 @@ const HeroSection = () => {
         {/* Avatar */}
         <div className="mb-8 border-primary">
           <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-foreground">
-            <img alt="Mia Carter" src="/lovable-uploads/ec518bb2-b216-49b6-b35c-fa7aefcef1b3.jpg" className="w-full h-full object-cover border-primary-foreground" />
+            <img alt="Nirav Arvinda" src="/lovable-uploads/ec518bb2-b216-49b6-b35c-fa7aefcef1b3.jpg" className="w-full h-full object-cover border-primary-foreground" />
           </div>
         </div>
 
