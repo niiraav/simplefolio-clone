@@ -8,6 +8,7 @@ import buzzbingoCompetitiveAnalysis from "@/assets/buzzbingo-competitive-analysi
 import buzzbingoTypography from "@/assets/buzzbingo-typography.png";
 import buzzbingoIconography from "@/assets/buzzbingo-iconography.png";
 import buzzbingoStyleguide from "@/assets/buzzbingo-styleguide.png";
+import buzzbingoIASitemap from "@/assets/buzzbingo-ia-sitemap.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -380,7 +381,7 @@ export const projects: Project[] = [
           "Upgrade path for legacy users migrating to the new backend"
         ],
         galleryImages: [
-          { src: "/placeholder.svg", alt: "Before/After Information Architecture sitemap" }
+          { src: buzzbingoIASitemap, alt: "Information Architecture sitemap showing app navigation flow including onboarding, sign in, wallet, vouchers and promotions sections" }
         ],
         pullQuote: {
           text: "Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.",
