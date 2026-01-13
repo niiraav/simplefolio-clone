@@ -1,7 +1,10 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import project1 from "@/assets/project-1.png";
+import project2 from "@/assets/project-2.png";
+import project3 from "@/assets/project-3.png";
+import project4 from "@/assets/project-4.png";
+import project5 from "@/assets/project-5.png";
+import project6 from "@/assets/project-6.png";
+import project7 from "@/assets/project-7.png";
 
 interface Project {
   id: number;
@@ -13,27 +16,45 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Design with Icons That Stand Out",
-    description: "A comprehensive icon library for modern interfaces",
+    title: "Terminal Order Tracking",
+    description: "Worldpay dashboard for terminal returns and tracking",
     image: project1,
   },
   {
     id: 2,
-    title: "Simplify Conversations",
-    description: "AI chatbot platform for seamless communication",
+    title: "Buzz Bingo Mobile App",
+    description: "Mobile experience for bingo and gaming",
     image: project2,
   },
   {
     id: 3,
-    title: "Discover The Beauty Of Nature",
-    description: "E-commerce platform for outdoor enthusiasts",
+    title: "Contract Renewals",
+    description: "Worldpay contract review and confirmation flow",
     image: project3,
   },
   {
     id: 4,
-    title: "Finance Dashboard",
-    description: "Real-time trading and analytics platform",
+    title: "Payment Links Dashboard",
+    description: "Worldpay merchant dashboard and analytics",
     image: project4,
+  },
+  {
+    id: 5,
+    title: "Patch Plant Care",
+    description: "Mobile app for plant care and gardening",
+    image: project5,
+  },
+  {
+    id: 6,
+    title: "Thomson Reuters Dashboard",
+    description: "Legal research and document management platform",
+    image: project6,
+  },
+  {
+    id: 7,
+    title: "Shopify Integration",
+    description: "E-commerce store management dashboard",
+    image: project7,
   },
 ];
 
