@@ -147,36 +147,55 @@ const ProjectDetail = () => {
                     Reflection
                   </h2>
                   <div className="text-muted-foreground leading-relaxed">
-                    {project.reflection.split('\n\n').map((paragraph, idx) => {
-                      // Check if paragraph starts with a number (numbered list item)
-                      const numberedMatch = paragraph.match(/^(\d+)\.\s+(.+)/);
-                      if (numberedMatch) {
-                        const [, number, content] = numberedMatch;
-                        const lines = content.split('\n');
-                        return (
-                          <div key={idx} className="flex gap-3 mb-3">
-                            <span className="font-semibold text-foreground">{number}.</span>
-                            <div>
-                              <span className="font-semibold text-foreground">{lines[0]}</span>
-                              {lines.slice(1).map((line, lineIdx) => (
-                                <p key={lineIdx} className="mt-1">{line}</p>
+                    {(() => {
+                      const paragraphs = project.reflection.split('\n\n');
+                      const numberedItems: { number: string; content: string; lines: string[] }[] = [];
+                      const otherParagraphs: { idx: number; content: string; isHeader: boolean; header?: string; rest?: string }[] = [];
+                      
+                      paragraphs.forEach((paragraph, idx) => {
+                        const numberedMatch = paragraph.match(/^(\d+)\.\s+(.+)/);
+                        if (numberedMatch) {
+                          const [, number, content] = numberedMatch;
+                          const lines = content.split('\n');
+                          numberedItems.push({ number, content, lines });
+                        } else if (paragraph.includes(':') && paragraph.split(':')[0].length < 30) {
+                          const [header, ...rest] = paragraph.split(':');
+                          otherParagraphs.push({ idx, content: paragraph, isHeader: true, header, rest: rest.join(':') });
+                        } else {
+                          otherParagraphs.push({ idx, content: paragraph, isHeader: false });
+                        }
+                      });
+                      
+                      return (
+                        <>
+                          {otherParagraphs.map((p) => 
+                            p.isHeader ? (
+                              <p key={p.idx} className="mb-4">
+                                <span className="font-semibold text-foreground">{p.header}:</span>
+                                {p.rest}
+                              </p>
+                            ) : (
+                              <p key={p.idx} className="mb-4 italic">{p.content}</p>
+                            )
+                          )}
+                          {numberedItems.length > 0 && (
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                              {numberedItems.map((item, idx) => (
+                                <div key={idx} className="flex gap-3">
+                                  <span className="font-semibold text-foreground">{item.number}.</span>
+                                  <div>
+                                    <span className="font-semibold text-foreground">{item.lines[0]}</span>
+                                    {item.lines.slice(1).map((line, lineIdx) => (
+                                      <p key={lineIdx} className="mt-1">{line}</p>
+                                    ))}
+                                  </div>
+                                </div>
                               ))}
                             </div>
-                          </div>
-                        );
-                      }
-                      // Check if it's a header like "What Worked:" or "What I'd Do Differently:"
-                      if (paragraph.includes(':') && paragraph.split(':')[0].length < 30) {
-                        const [header, ...rest] = paragraph.split(':');
-                        return (
-                          <p key={idx} className="mb-4">
-                            <span className="font-semibold text-foreground">{header}:</span>
-                            {rest.join(':')}
-                          </p>
-                        );
-                      }
-                      return <p key={idx} className="mb-4 italic">{paragraph}</p>;
-                    })}
+                          )}
+                        </>
+                      );
+                    })()}
                   </div>
                   
                   {/* Reflection Images Carousel */}
