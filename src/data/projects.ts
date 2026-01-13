@@ -5,6 +5,9 @@ import buzzbingoLogo from "@/assets/buzzbingo-logo.png";
 import buzzbingoCover from "@/assets/buzzbingo-cover.png";
 import buzzbingoHeroScreens from "@/assets/buzzbingo-hero-screens.png";
 import buzzbingoCompetitiveAnalysis from "@/assets/buzzbingo-competitive-analysis.png";
+import buzzbingoTypography from "@/assets/buzzbingo-typography.png";
+import buzzbingoIconography from "@/assets/buzzbingo-iconography.png";
+import buzzbingoStyleguide from "@/assets/buzzbingo-styleguide.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -393,7 +396,9 @@ export const projects: Project[] = [
           "Component Library: I built reusable components (buttons, cards, navigation bars) that reduced design-to-dev handoff time by 60%."
         ],
         galleryImages: [
-          { src: "/placeholder.svg", alt: "Style guide showing typography scale, colour system, and icon library" }
+          { src: buzzbingoTypography, alt: "Typography guide showing Qanelas Soft font sizes for headings, buttons, body text and navigation" },
+          { src: buzzbingoIconography, alt: "Iconography system showing footer nav icons and various icon sizes from 16px to 64px" },
+          { src: buzzbingoStyleguide, alt: "Complete style guide showing typography with Qanelas Soft font and colour palette including primary red, secondary navy, teal, amber and grey" }
         ]
       },
       {
