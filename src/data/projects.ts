@@ -430,15 +430,6 @@ export const projects: Project[] = [
       {
         title: "Final Designs",
         content: "A Self-Service Bingo Hub — The redesigned app transformed the club experience by putting control in users' hands.",
-        bullets: [
-          "Home Screen: Personalised greeting, session times, jackpot cards, quick access to key features",
-          "Vouchers Screen: Visual cards with clear expiry dates, filters (View all, Your club, Saved)",
-          "Wallet Screen: Large balance display (£4,720.00), quick top-up buttons, recent transactions",
-          "Promotions Screen: Bold visual cards with clear CTAs and engaging imagery",
-          "Quick Top-Up: Preset amounts (£10, £20, £50, £100) eliminated form friction for repeat users",
-          "Session Discovery: Filters by date, time, and location replaced endless scrolling",
-          "Social Features: Recent winners board and friend connections increased engagement"
-        ],
         galleryImages: [
           { src: buzzbingoHeroMockup, alt: "Hero mockup showing 4 phones with Home, Vouchers, Wallet, and Promotions screens in bingo club setting" },
           { src: buzzbingoClubScreens, alt: "Club page screens showing Home with jackpots, Info with facilities and opening times, and Location with map" },
@@ -456,7 +447,7 @@ export const projects: Project[] = [
       { metric: "Efficiency", value: "60%", description: "Faster design-to-dev time due to living design system" }
     ],
     impactImage: { src: buzzbingoMetrics, alt: "Metrics dashboard showing DAU +200%, User Satisfaction 4.6/5 stars, App Store Rating 4.3, and Support Tickets -60%" },
-    reflection: "The living design system was the project's secret weapon. By investing time upfront in reusable components, we accelerated every subsequent phase and ensured consistency across all screens.\n\nWhat I'd Do Differently:\n\n1. Accessibility from Day One — I audited for accessibility after initial designs, which created rework. In future projects, I'd include users with cognitive and physical disabilities in early-stage personas and testing.\n\n2. Search Analytics — I would use search analytics to reveal what users search for but can't find in navigation. This data would inform information architecture decisions earlier in the process.\n\n3. Quantitative Baselines — Whilst we tracked DAU growth post-launch, I wish we'd established clearer pre-launch baselines for support ticket volume and task completion times to strengthen our impact story."
+    reflection: "What Worked:\nThe living design system accelerated delivery and ensured visual consistency across all screens.\n\nWhat I'd Do Differently:\n\n1. Accessibility from Day One\nAuditing for accessibility after initial designs created rework. I'd include users with cognitive and physical disabilities in early personas and testing.\n\n2. Leverage Search Analytics\nSearch data would reveal what users can't find in navigation, informing information architecture decisions earlier.\n\n3. Establish Quantitative Baselines\nWe tracked DAU growth post launch but lacked pre launch baselines for support tickets and task completion times to strengthen our impact story."
   },
 ];
 
