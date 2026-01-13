@@ -9,6 +9,8 @@ import buzzbingoTypography from "@/assets/buzzbingo-typography.png";
 import buzzbingoIconography from "@/assets/buzzbingo-iconography.png";
 import buzzbingoStyleguide from "@/assets/buzzbingo-styleguide.png";
 import buzzbingoIASitemap from "@/assets/buzzbingo-ia-sitemap.png";
+import buzzbingoVouchersIterations from "@/assets/buzzbingo-vouchers-iterations.png";
+import buzzbingoClubIterations from "@/assets/buzzbingo-club-iterations.png";
 import gophrHero from "@/assets/gophr-hero.png";
 import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
@@ -413,8 +415,8 @@ export const projects: Project[] = [
           "Iteration 5 — The 'Daub Interaction' Delight: Added a tactile 'daub' interaction with haptic feedback and sound effects, recreating the physical dauber experience."
         ],
         galleryImages: [
-          { src: "/placeholder.svg", alt: "Wireframe progression showing navigation iterations" },
-          { src: "/placeholder.svg", alt: "Interactive prototype showing daub animation" }
+          { src: buzzbingoVouchersIterations, alt: "Vouchers page design evolution from wireframe to early iteration to final iteration with improved navigation, content layout, and visual hierarchy" },
+          { src: buzzbingoClubIterations, alt: "Club page design evolution from wireframe to final iteration showing personalized greetings, dynamic hero banners, and vibrant branded jackpot cards" }
         ]
       },
       {
