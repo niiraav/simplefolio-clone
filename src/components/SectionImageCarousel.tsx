@@ -30,6 +30,10 @@ const SectionImageCarousel = ({
     setLightboxIndex(prev => (prev + 1) % images.length);
   };
   if (!images || images.length === 0) return null;
+  
+  const currentImage = images[currentIndex];
+  if (!currentImage) return null;
+  
   return (
     <>
       <div className="relative">
@@ -39,8 +43,8 @@ const SectionImageCarousel = ({
           onClick={() => openLightbox(currentIndex)}
         >
           <img
-            src={images[currentIndex].src}
-            alt={images[currentIndex].alt}
+            src={currentImage.src}
+            alt={currentImage.alt}
             className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
