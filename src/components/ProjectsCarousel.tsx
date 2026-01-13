@@ -8,6 +8,7 @@ import project6 from "@/assets/project-6.png";
 import project7 from "@/assets/project-7.png";
 import project8 from "@/assets/project-8.png";
 import project9 from "@/assets/project-9.png";
+import gophrCarousel from "@/assets/gophr-carousel.png";
 
 interface Project {
   id: number;
@@ -73,6 +74,13 @@ const projects: Project[] = [
     title: "Terminal Order Tracking",
     description: "Worldpay dashboard for terminal returns and tracking",
     image: project9,
+  },
+  {
+    id: 10,
+    title: "Gophr Mobile App",
+    description: "Last-mile delivery management interface",
+    image: gophrCarousel,
+    caseStudyId: "gophr-logistics",
   },
 ];
 
