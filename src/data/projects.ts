@@ -2,6 +2,7 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import gophrHero from "@/assets/gophr-hero.png";
+import gophrCover from "@/assets/gophr-cover.png";
 import gophrDashboard from "@/assets/gophr-dashboard.png";
 import gophrTracker from "@/assets/gophr-tracker.png";
 import gophrInvoices from "@/assets/gophr-invoices.png";
@@ -69,7 +70,7 @@ export const projects: Project[] = [
     id: "gophr-logistics",
     title: "Modernising Last-Mile Logistics for Scale",
     description: "Transforming a utilitarian booking tool into a transparent, trust-building logistics platform.",
-    image: gophrHero,
+    image: gophrCover,
     role: "Lead UX/UI Designer",
     timeline: "Jul 2022 – Dec 2022",
     tools: ["Figma", "Jira", "Miro", "Protopie"],

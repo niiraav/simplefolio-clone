@@ -26,11 +26,13 @@ const Navbar = ({ activeSection = "home" }: NavbarProps) => {
               variant={activeSection === "home" ? "navActive" : "nav"} 
               size="icon"
               className="rounded-xl h-10 w-10"
-              onClick={() => scrollToSection("home")}
+              asChild
               onMouseEnter={() => setHoveredItem("home")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <Home className="h-4 w-4" />
+              <a href="/">
+                <Home className="h-4 w-4" />
+              </a>
             </Button>
             <div 
               className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 bg-foreground/90 text-background text-xs font-medium rounded-lg whitespace-nowrap transition-all duration-200 ${
