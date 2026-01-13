@@ -13,6 +13,7 @@ import buzzbingoVouchersIterations from "@/assets/buzzbingo-vouchers-iterations.
 import buzzbingoClubIterations from "@/assets/buzzbingo-club-iterations.png";
 import buzzbingoHeroMockup from "@/assets/buzzbingo-hero-mockup.png";
 import buzzbingoClubScreens from "@/assets/buzzbingo-club-screens.png";
+import buzzbingoMetrics from "@/assets/buzzbingo-metrics.png";
 import buzzbingoWalletScreens from "@/assets/buzzbingo-wallet-screens.png";
 import buzzbingoVouchersScreens from "@/assets/buzzbingo-vouchers-screens.png";
 import buzzbingoPromotionsScreens from "@/assets/buzzbingo-promotions-screens.png";
@@ -454,7 +455,7 @@ export const projects: Project[] = [
       { metric: "App Growth", value: "160%", description: "Overall app growth post-launch" },
       { metric: "Efficiency", value: "60%", description: "Faster design-to-dev time due to living design system" }
     ],
-    impactImage: { src: "/placeholder.svg", alt: "Metrics dashboard or before/after comparison chart" },
+    impactImage: { src: buzzbingoMetrics, alt: "Metrics dashboard showing DAU +200%, User Satisfaction 4.6/5 stars, App Store Rating 4.3, and Support Tickets -60%" },
     reflection: "The living design system was the project's secret weapon. By investing time upfront in reusable components, we accelerated every subsequent phase and ensured consistency across all screens.\n\nWhat I'd Do Differently:\n\n1. Accessibility from Day One — I audited for accessibility after initial designs, which created rework. In future projects, I'd include users with cognitive and physical disabilities in early-stage personas and testing.\n\n2. Search Analytics — I would use search analytics to reveal what users search for but can't find in navigation. This data would inform information architecture decisions earlier in the process.\n\n3. Quantitative Baselines — Whilst we tracked DAU growth post-launch, I wish we'd established clearer pre-launch baselines for support ticket volume and task completion times to strengthen our impact story."
   },
 ];
