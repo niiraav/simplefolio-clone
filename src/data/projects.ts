@@ -435,24 +435,6 @@ export const projects: Project[] = [
     impactImage: { src: "/placeholder.svg", alt: "Metrics dashboard or before/after comparison chart" },
     reflection: "The living design system was the project's secret weapon. By investing time upfront in reusable components, we accelerated every subsequent phase and ensured consistency across all screens.\n\nWhat I'd Do Differently:\n\n1. Accessibility from Day One — I audited for accessibility after initial designs, which created rework. In future projects, I'd include users with cognitive and physical disabilities in early-stage personas and testing.\n\n2. Search Analytics — I would use search analytics to reveal what users search for but can't find in navigation. This data would inform information architecture decisions earlier in the process.\n\n3. Quantitative Baselines — Whilst we tracked DAU growth post-launch, I wish we'd established clearer pre-launch baselines for support ticket volume and task completion times to strengthen our impact story."
   },
-  {
-    id: "design-with-icons",
-    title: "Design with Icons That Stand Out",
-    description: "A comprehensive icon library for modern interfaces with customisable styles.",
-    image: project1,
-    overview: "A comprehensive icon library designed for modern digital interfaces. The project aimed to create versatile, scalable icons that maintain visual consistency across different platforms and screen sizes.",
-    solution: "The solution involved creating a modular icon system with multiple style variants. Each icon was designed on a consistent grid, ensuring pixel-perfect alignment and seamless integration into any design system.",
-    images: [project1, project2, project3],
-  },
-  {
-    id: "discover-nature",
-    title: "Discover The Beauty Of Nature",
-    description: "E-commerce platform designed for outdoor enthusiasts with seamless checkout flows.",
-    image: project3,
-    overview: "An e-commerce platform crafted for outdoor enthusiasts. The project focused on creating an immersive shopping experience that reflects the beauty and adventure of nature.",
-    solution: "The solution features a clean, nature-inspired design with intuitive navigation and seamless checkout flows. High-quality imagery and thoughtful micro-interactions enhance the overall user experience.",
-    images: [project3, project1, project2],
-  },
 ];
 
 export const getProjectById = (id: string): Project | undefined => {
