@@ -1,43 +1,328 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <title>Nirav Arvinda | Product Designer</title>
-    <meta name="description" content="Nirav Arvinda - A curious designer, coder, and storyteller crafting seamless experiences and bold visuals." />
-    <meta name="author" content="Nirav Arvinda" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradePad — Job to Cash in 2 Minutes</title>
+  <meta name="description" content="TradePad turns a WhatsApp photo + client name into a quote → invoice → payment link in 2 minutes. Built for UK tradespeople.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
 
-    <meta property="og:title" content="Nirav Arvinda | Product Designer" />
-    <meta property="og:description" content="A curious designer, coder, and storyteller crafting seamless experiences and bold visuals." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">TradePad</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#problems">Why TradePad</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#signup" class="btn btn-primary btn-sm">Join the waitlist</a>
+      </div>
+    </div>
+  </header>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@niravarvinda" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <script type="module" crossorigin src="/assets/index-bUFwQeZn.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DOtKjU0B.css">
-  </head>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="dot"></span>
+            Built for UK tradespeople · CIS-ready
+          </div>
+          <h1 class="display-xl">Invoicing shouldn't take longer than the job.</h1>
+          <p class="subhead">
+            TradePad turns a WhatsApp photo and a client name into a quote → invoice → payment link in two minutes. No spreadsheets. No evening admin.
+          </p>
 
-  <body>
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script>
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
+          <form class="signup-form" id="signup-form">
+            <input type="email" id="email-input" placeholder="your@email.com" required aria-label="Email">
+            <button type="submit" class="btn btn-primary">Join the waitlist</button>
+          </form>
+          <p class="privacy-note">
+            Free during beta. We never share your email. <a href="privacy.html">Privacy policy</a>.
+          </p>
+          <div class="form-message" id="form-message" role="status"></div>
+
+          <div class="hero-meta">
+            <div class="avatars">
+              <span class="avatar" style="background:#fb923c">JS</span>
+              <span class="avatar" style="background:#ec4899">RM</span>
+              <span class="avatar" style="background:#8b5cf6">TK</span>
+              <span class="avatar" style="background:#34d399">DA</span>
+            </div>
+            <div class="hero-meta-text">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <span>Building with 12 trades across the UK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-mockup">
+          <img src="assets/HeroUI.png" alt="TradePad app interface showing job management, quotes, and payments" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="problems" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The problem</span>
+        <h2 class="display-lg">Evening admin is stealing your profit.</h2>
+        <p class="subhead center">
+          Three out of ten small jobs never get invoiced. CIS feels like a black box. Chasing payments is the worst part of the week.
+        </p>
+      </div>
+      <div class="grid-3">
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="title-md">You did the job. You forgot to invoice.</h3>
+          <p>After a ten-hour day, paperwork is the last thing on your mind. Small jobs slip through the cracks — £200-400/month gone to "I'll do it tomorrow."</p>
+          <div class="stat">
+            <div class="stat-number">~£3,600<span class="stat-unit">/yr</span></div>
+            <div class="stat-label">Lost to forgotten invoices</div>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="title-md">CIS tax is a black box.</h3>
+          <p>20% of your pay goes to HMRC before you see it. Most tradespeople don't know what they can claim back until their accountant tells them in April.</p>
+          <div class="stat">
+            <div class="stat-number">20<span class="stat-unit">%</span></div>
+            <div class="stat-label">Deducted before you're paid</div>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="title-md">Chasing payments is awkward.</h3>
+          <p>Asking a customer for money feels worse than the job itself. So you wait. And wait. And cashflow tightens while the invoice sits unsent.</p>
+          <div class="stat">
+            <div class="stat-number">14<span class="stat-unit"> days</span></div>
+            <div class="stat-label">Average late payment delay</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section id="how-it-works" class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">How it works</span>
+        <h2 class="display-lg">Quote to cash in three taps.</h2>
+        <p class="subhead center">
+          No more evening spreadsheets. No more forgotten invoices. Just snap, quote, and get paid.
+        </p>
+
+        <div class="pill-group" role="tablist" aria-label="Workflow stages">
+          <button class="pill-tab is-active" type="button" data-step="1" role="tab" aria-selected="true">1 · Snap</button>
+          <button class="pill-tab" type="button" data-step="2" role="tab" aria-selected="false">2 · Quote</button>
+          <button class="pill-tab" type="button" data-step="3" role="tab" aria-selected="false">3 · Get paid</button>
+        </div>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card" data-step="1">
+          <div class="step-head">
+            <div class="step-number">1</div>
+            <span class="badge-pill">~15 seconds</span>
+          </div>
+          <h3 class="title-md">Snap a photo</h3>
+          <p>Take a photo of the job site. Add the client name and address. TradePad creates a job record instantly — no typing.</p>
+          <div class="product-mockup">
+            <img src="assets/Snap%20a%20photo.png" alt="Snap a photo of the job site" loading="lazy">
+          </div>
+        </article>
+
+        <article class="step-card" data-step="2">
+          <div class="step-head">
+            <div class="step-number">2</div>
+            <span class="badge-pill">~45 seconds</span>
+          </div>
+          <h3 class="title-md">Send a quote</h3>
+          <p>Pick line items from your price list. CIS deductions calculate automatically for UK construction work. One tap to send.</p>
+          <div class="product-mockup">
+            <img src="assets/send%20a%20quote.png" alt="Send a professional quote" loading="lazy">
+          </div>
+        </article>
+
+        <article class="step-card" data-step="3">
+          <div class="step-head">
+            <div class="step-number">3</div>
+            <span class="badge-pill">2 minutes total</span>
+          </div>
+          <h3 class="title-md">Get paid</h3>
+          <p>One tap turns the quote into an invoice with a payment link. Card or bank transfer. Notification the moment money lands.</p>
+          <div class="product-mockup">
+            <img src="assets/get%20paid.png" alt="Get paid instantly" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section id="signup" class="section">
+    <div class="container">
+      <div class="cta-band">
+        <span class="section-label">In development</span>
+        <h2 class="display-md">TradePad is currently in development.</h2>
+        <p class="subhead center">Join the waitlist to be notified when early access opens. We're onboarding in small batches.</p>
+        <form class="signup-form signup-form-center" id="signup-form-2">
+          <input type="email" id="email-input-2" placeholder="your@email.com" required aria-label="Email">
+          <button type="submit" class="btn btn-primary">Join the waitlist</button>
+        </form>
+        <p class="privacy-note">Free during beta · No card needed · <a href="privacy.html">Privacy policy</a></p>
+        <div class="form-message" id="form-message-2" role="status"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand brand-on-dark">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-name">TradePad</span>
+          </a>
+          <p class="footer-tagline">Job to cash in 2 minutes. Built for UK tradespeople.</p>
+          <div class="footer-meta">
+            <span class="dot dot-success"></span>
+            All systems normal
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#how-it-works">How it works</a>
+          <a href="#signup">Early access</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="mailto:hello@nirav.work">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="privacy.html">Terms</a>
+        </div>
+        <div class="footer-col">
+          <h4>For trades</h4>
+          <a href="#">CIS guide</a>
+          <a href="#">Late-payment template</a>
+          <a href="#">Quote checklist</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 TradePad. Made in the UK.</span>
+        <span>hello@nirav.work</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+// ─── Supabase early-access signup (shared by both forms) ───────
+const SUPABASE_URL = 'https://vwanxorcmyzfxumhyvxl.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3YW54b3JjbXl6Znh1bWh5dnhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgxODg3NzksImV4cCI6MjA5Mzc2NDc3OX0.TOjRUgcYgtNJfq-zqLxhQrw_8r2yA6_cIJuQ_-SUhwA';
+
+const supabaseClient = window.supabase
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+  : null;
+
+function wireSignupForm(formId, inputId, msgId) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+  const input = document.getElementById(inputId);
+  const msgEl = document.getElementById(msgId);
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = (input.value || '').trim();
+    const btn = form.querySelector('button');
+
+    if (!email) return;
+
+    btn.disabled = true;
+    const original = btn.textContent;
+    btn.textContent = 'Joining…';
+    msgEl.textContent = '';
+    msgEl.className = 'form-message';
+
+    try {
+      if (!supabaseClient) throw new Error('Supabase not loaded');
+
+      const { error } = await supabaseClient
+        .from('early_access_signups')
+        .insert([{ email, source: 'landing_page', trade_type: null }]);
+
+      if (error) {
+        if (error.code === '23505') {
+          msgEl.textContent = "You're already on the list — we'll be in touch.";
+          msgEl.className = 'form-message success';
+        } else {
+          throw error;
         }
-      }(window.location))
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-    <div id="root"></div>
-  </body>
+      } else {
+        msgEl.textContent = "You're on the list. We'll be in touch soon.";
+        msgEl.className = 'form-message success';
+        input.value = '';
+      }
+    } catch (err) {
+      console.error(err);
+      msgEl.textContent = 'Something went wrong. Please try again.';
+      msgEl.className = 'form-message error';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  });
+}
+
+wireSignupForm('signup-form',   'email-input',   'form-message');
+wireSignupForm('signup-form-2', 'email-input-2', 'form-message-2');
+
+// ─── Pill-group tabs (Cal signature): highlight active step ────
+const pillTabs = document.querySelectorAll('.pill-tab');
+const stepCards = document.querySelectorAll('.step-card');
+
+pillTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const step = tab.dataset.step;
+    pillTabs.forEach(t => {
+      const on = t === tab;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    stepCards.forEach(card => {
+      const match = card.dataset.step === step;
+      card.style.transition = 'transform .35s ease, box-shadow .35s ease, border-color .35s ease';
+      card.style.transform = match ? 'translateY(-4px)' : 'translateY(0)';
+      card.style.boxShadow = match
+        ? '0 22px 40px -22px rgba(17,17,17,0.28)'
+        : '';
+      card.style.borderColor = match ? '#111111' : '';
+    });
+  });
+});
+
+</script>
+</body>
 </html>
